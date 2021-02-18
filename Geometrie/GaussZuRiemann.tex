@@ -1,0 +1,81 @@
+Zur erweiterung des bisher Betrachtenen wollen wir jetzt weg von der einschränkung die es bei \hyperref[regFlaeche]{regulären Flächen} gab das wir eine einbettung in den $\Rthree$ haben müssen und wollen auf allgemeine \hyperref[diffMannigfaltigkeit]{differenzierbare Mannigfaltigkeiten} übergehen.\\
+Dafür betrachtet man zuerst einmal ein Axiomensystem für die euklidische Ebene wie wir sie kennen:
+
+\begin{titleDef}{Geodätische Linie}
+\label{geodaetischeLinie}
+Sei $(X,d)$ ein \hyperref[MetrischerRaum]{metrischer Raum}. Eine \textbf{geodätische Linie} $g$ in $X$ ist das Bild einer \hyperref[abstandserhaltend]{abstandserhaltenden} Abbilddung $\gamma:\mathbb{R}\to X$ also $g=\gamma(\mathbb{R})$ und $d(\gamma(t_1),\gamma(t_2))=\lvert t_1-t_2\rvert$ für alle $t_1,t_2\in\mathbb{R}$.\\
+Falls $d$ eine Längenmetrik ist realisiert eine \textbf{geodätische Linie} gerade den kürzeste Abstand zwischen zwei Punkten $p,q\in X$\\
+Analog gilt umgekehrt: Ist $c:\mathbb{R}\to X$ eine kürzeste Verbindung zwischen je zwei ihrer Punkt so ist $c$ eine geodätische Linie.\par
+Der begriff geodätische Linie und \hyperref[geodaetische]{Geodätische} sind häufig identisch nur das eine geodätische Linie eben global kürzeste Verbindungen für alle Punkte die auf ihr liegen beschreibt während "normale" \hyperref[geodaetische]{Geodätische} im Allgemeinen nur lokal kürzeste Verbindungen beschreiben. 
+\end{titleDef}
+
+\begin{titleDef}{Axiomensystem ebene Geometrie}
+\label{axiomPlane}
+\begin{enumerate}
+	\item \begin{rawDef}\label{inzidenzAxiom}
+		\textbf{Inzidenz-Axiom:}Durch je zwei verschiedene Punkt $p,q\in X$ geht genau eine eine geodätische Linie,d.h. für $p,q\in X,\:p\neq q$ existiert genau eine geodätische Linie $g$ so dass $p,q\in g$
+	\end{rawDef}
+	\item \begin{rawDef}\label{spiegelungsAxiom}
+	\textbf{Spiegelungs-Axiom:} Für jede geodätische Linie $g$ hat das Komplement $X\setminus g$ (also der Raum $X$ ohne die Punkte die auf $g$ liegen) genau zwei \hyperref[zsmkomponente]{Zusammenhangskomponenten} und es gibt eine \hyperref[Isometrie]{Isometrie} die die Punkte von $g$ fixiert(also nicht verändert) und die Zusammenhangskomponenten von $X$ vertauscht. Also zerlegt die geodätische Linie $g$ den Raum $X$ in zwei Hälften.
+\end{rawDef}
+	\item \begin{rawDef}\label{parallelenAxiom}
+	\textbf{Parallelen-Axiom:}Durch einen Punkt außerhalb einer gegebenen geodätischen Linie existiert genau eine weitere geodätische Linie die diese nicht schneidet. Also gibt es eine geodätische Linie die parallel zu der gegeben ist und in der der Punkt liegt.
+\end{rawDef}
+\end{enumerate}
+\end{titleDef}
+
+\begin{titleDef}{Eindeutigkeit von Geomtrien}
+\label{eindeutigkeitGeo}
+Das bekannteste Modell das die drei obigen Axiome erfüllt ist die euklidische Ebene $(\Rtwo,d_e)$ wobei $d_e$ die allseits bekannte euklidische Metrik ist.\\
+Ein Modell das zwar das Inzidenz-und Spiegelungs-Axiom erfüllt, das Parallelen-Axiom aber nicht erfüllt beschreiben die \textbf{hypergeometrische Geometrie} die bestandteil dieses Abschnittes sind. Ein solches Modell/bzw das Modell ist das \hyperref[poincare]{Poincaré- oder Halbebenen} Modell $(H^2,d_h)$ der hyperbolischen Ebene\par
+Tatsächlich sind $(\Rtwo,d_e)$ und $(H^2,d_h)$ die einzigen Modelle für alle mögichen Geometrien, d.h:
+\begin{itemize}
+	\item Ein \hyperref[MetrischerRaum]{metrischer Raum} $(X,d)$, der alle drei Axiome der ebenen Geometrie erfüllt, ist \hyperref[Isometrie]{isometrisch} zur euklidischen Ebene $(\Rtwo,d_e)$
+	\item Ein \hyperref[MetrischerRaum]{metrischer Raum} $(X,d)$, der alle das Inzidenz- und Spiegelungs-Axiom der euklidischen Ebene erfüllt, das Parallel-Axiom jedoch nicth ist \hyperref[Isometrie]{isometrisch} (bis auf Skalierungen) zur hyperbolischen Ebene $(H^2,d_h)$
+\end{itemize}
+\end{titleDef}
+
+\begin{titleDef}{Riemannsche Metrik}
+\label{riemannMetrik}
+Für eine \hyperref[regFlaeche]{reguläre Flächen} $S$ hatten wir in jeden Punkt $p\in S$ einen 2-dimensionalen Vektorraum, den \hyperref[tangentialebene]{Tangentialraum} $T_pS$ konstruiert und dann mithilfe der \hyperref[fundamentalformEins]{1.Fundamentalform} jedem solchen Punkt ein Skalarprodukt $\langle \cdot,\cdot\rangle_p$ auf $T_pS$ definiert.\\
+Da diese konstruktion durch die Einbettung in den $\Rtwo$ von regulären Flächen "limitiert" ist von der wir weg wollen wurde der Begirff der \textbf{Riemmanschen Metrik} eingeführt.\par
+Für eine n-dimensionale \hyperref[diffMannigfaltigkeit]{differenzierbare Mannigfaltigkeit} $M$ konstruiert man nun einen (abstrakten/beliebigen) n-dimensionalen Vektorraum, den \hyperref[tangentialraum]{Tangentialraum} $T_pM$(wir gehen hier von den 2-dimensionalen differenzierbaren Mannigfaltigkeiten die reguläre Flächen sind auf n-dimensionale über und passen entsprechend die \hyperref[tangentialebene]{Tangentialebene} zu einem entsprechenden \hyperref[tangentialraum]{Tangentialraum})\\
+Eine \textbf{Riemannsche Metrik} ordnet nun jedem Punkt $p\in M$ ein Skalarprodukt $\langle \cdot,\cdot\rangle_p$ auf $T_pM$ zu.\par
+Beachte das eine \textbf{Riemannsche Metrik} keine \hyperref[Metrik]{Metrik} gemäß vorheriger Definition ist, man jedoch weiterhin die Länge einer \hyperref[kurve]{Kurve} darüber definieren kann. \par
+Eine Riemannsche Metrik kann durch eine Familie von positiv definiten symmetrische $(n\times n)$-Matrizen beschrieben werden, die eine Familie von Skalarprodukten auf der entsprechenden Mannigfaltigkeit definiert.\par
+Sei $U=M$ eine offene Untermannigfaltigkeit von $\mathbb{R}^n$, dann ist $T_pM=T_pU\cong T_p\mathbb{R}^n\cong R^n$. Eine Riemannsche Metrik auf $U$ ist dann gegeben durch eine Abbildung 
+$$g:U\to Sym(n);\: (u_1,\ldots,u_n)\mapsto(g_{ij}(u_1,\ldots,u_n))$$
+für $\dfrac{1}{2}n(n+1)\: C^\infty$-Funktionen $g_{ij}$ von $U$ in die Menge der positiv definiten, symmetrischen $(n\times n)$-Matrizen $Sym(n)$ also genau den Matrizen von Skalarprodukten auf $\mathbb{R}^n$ bzgl. der Standardbasis.
+\end{titleDef}
+
+\begin{titleDef}{Riemannsche Mannigfaltigkeit}
+\label{riemannMannigfaltigkeit}
+Eine \textbf{Riemannsche Mannigfaltigkeit} ist eine \hyperref[diffMannigfaltigkeit]{differenzierbare Mannigfaltigkeit} versehen mit einer \hyperref[riemannMetrik]{\textbf{Riemannschen Metrik}}.\par
+Offensichtlich sind \hyperref[regFlaeche]{reguläre Flächen} Riemannsche Mannigfaltigkeiten wobei die Riemannsche Metrik die \hyperref[fundamentalformEins]{1.Fundamentalform} ist.
+\end{titleDef}
+
+\begin{titleDef}{Beispiele}
+\begin{enumerate}[label=(\arabic*)]
+	\item Die euklidische Eben als Riemannsche Mannigfaltigkeit:\\
+	$U=\Rtwo,\: g_{ij}(u_1,u_2)=\delta_{ij}$ d.h
+	$$(g_{ij}(u_1,u_2))=\begin{pmatrix}
+		1&0\\0&1
+	\end{pmatrix}\in Sym(2)$$
+	\item Die \hyperref[hyperbolischpoincare]{hyperbolische Ebene/Halbebene} als Riemannsche Mannigfaltigkeit:\\
+	$U=H^2=\{(u_1,u_2)\in\Rtwo|\ u_2>0\},\: g_{ij}=\frac{\delta_{ij}}{u_2^2}$ d.h:
+	$$(g_{ij}(u_1,u_2))=\begin{pmatrix}
+	\frac{1}{u_2^2}&0\\0&\frac{1}{u_2^2}
+	\end{pmatrix}\in Sym(2)$$
+\end{enumerate}
+\end{titleDef}
+
+\begin{titleDef}{Skalarprodukt,Länge und Winkel von Tangentialvektoren}
+\label{kennwerteRiemann}
+Mithilfe einer \hyperref[riemannMetrik]{Riemannschen Metrik} kann man mithilfe des dadurch definierte Skalarprodukt für zwei \hyperref[tangentialvektor]{Tangentialvektoren} $a=(a_1,a_2),b=(b_1,b_2)$ auf einer offenen Untermannigfaltikeit $U\subset\Rtwo$ entsprechende Größen definieren:
+\begin{itemize}
+	\item \textbf{Skalarprodukt:} $$\langle a,b\rangle_p=\sum_{i,j=1}^{2}g_{ij}(u_1,u_2)a_ib_j$$
+	\item \textbf{Länge:} $$\lVert a\rVert_{(u_1,u_2)}=\sqrt{\langle a,a\rangle_{(u_1,u_2)}}=\sqrt{\sum\limits_{i,j=1}^{2}g_{ij}(u_1,u_2)a_ib_j}$$
+	\item \textbf{Winkel:} $$\cos\angle(a,b)=\dfrac{\langle a,b\rangle_{(u_1,u_2)}}{\lVert a\rVert_{(u_1,u_2)}\lVert b\rVert_{(u_1,u_2)}}$$
+	Der hyperbolische Winkel stimmt mit dem euklidischen Winkel überein anders als die hyperbolische Länge die sich anders als die euklidische Länge verhält.
+\end{itemize}
+\end{titleDef}

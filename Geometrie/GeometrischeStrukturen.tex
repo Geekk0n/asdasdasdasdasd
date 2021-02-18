@@ -1,0 +1,99 @@
+\begin{titleDef}{Metrische Räume}
+\label{MetrischerRaum}
+Ein Paar (X,d) aus einer Menge X und einer \hyperref[Metrik]{Metrik} heißt metrischer Raum.\\
+Metrische Räume sind \hyperref[hausdorffsch]{hausdorffsch}.
+\end{titleDef}
+
+\begin{titleDef}{Topologische Räume}
+\label{Topologie}
+Ein topologischer Raum ist ein Paar $(X,\mathcal{O})$ bestehend aus einer Menge X und einem System $\mathcal{O}\subseteq\mathcal{P}(X)$ von Teilmengen von X, so dass gilt
+\begin{enumerate}
+    \item $X,\emptyset\in\mathcal{O}$
+    \item Der Durchschnitt von endlich vielen Mengen aus $\mathcal{O}$ ist wieder in $\mathcal{O}$$$\Leftrightarrow\bigcap^n_{i=1}X_i\in\mathcal{O}, n\in\mathbb{N},X_i\in\mathcal{O}$$
+    \item Die Vereinigung von beliebig vielen Mengen aus $\mathcal{O}$ ist wieder in $\mathcal{O}$\\$$\Leftrightarrow\bigcup_{i=1}^kX_i\in\mathcal{O}, k\in\mathbb{N}\cup\{\infty\},X_i\in\mathcal{O}$$
+\end{enumerate}
+Ein solches System $\mathcal{O}$ von Teilmengen heißt \textbf{Topologie} von X 
+\end{titleDef}
+
+\begin{titleDef}{Umgebung}
+\label{Umgebung}
+Sei $B\subset X$ eine Teilmenge von X einer \Toporef \Topo. Eine Teilmenge ${U\subseteq X}$ heißt Umgebung von B, falls eine offene Menge O bezüglich der \Toporef existiert, so dass $B\subseteq O\subseteq U$. Also B ist komplett in einer offenen Teilmenge von X enthalten. Beachte das B nicht offen sein muss.
+\end{titleDef}
+
+\begin{titleDef}{Topologische Mannigfaltigkeiten}
+\label{Mannigfaltigkeit}
+Eine \textbf{(topologische) Mannigfaltigkeit} ist ein \Toporeflong $M$ mit:
+\listbsp
+\begin{enumerate}
+	\item $M$ ist \textbf{lokal euklidisch}, d.h für alle Punkte $p\in M$ existiert eine \hyperref[offen]{offene} \hyperref[Umgebung]{Umgebung} $U$ von $p$ und ein \hyperref[homoemorph]{Homöomorphismus} ${\varphi:U\to \varphi(U)\subseteq\mathbb{R}^n}$ auf eine offene Teilmenge von $\mathbb{R}^n$ für gewisses n.
+	\item $M$ ist \hyperref[hausdorffsch]{Hausdorffsch} und hat eine abzählbare \hyperref[basisTopo]{Basis}.
+\end{enumerate}
+\end{titleDef}
+
+\begin{titleDef}{Differenzierbare Mannigfaltigkeit}
+\label{diffMannigfaltigkeit}
+Eine \textbf{Differenzierbare Mannigfaltigkeit} ist eine topologische Mannigfaltigkeit versehen mit einem \hyperref[maxAtlas]{maximalen Atlas}.
+\end{titleDef}
+
+\begin{titleDef}{Simplizialkomplexe}
+\label{simplex}
+Ein \textbf{k-Simplex} in $\mathbb{R}^n$ ist die \hyperref[konvHuelle]{konvexe Hülle} $s(v_0,v_1,\ldots,v_k)$ von k+1 affin unabhängigen Punkten $v_0,v_1,\ldots,v_k$.\par
+Eine endliche Menge $K$ von Simplexen heißt (endlicher) $\textbf{Simplizial-Komplex}$ wenn gilt:
+\begin{enumerate}
+	\item Mit jedem Simplex in K enthält K auch alle zugehörigen Teilsimplexe.\\Also wenn das "Dreieck" $s(v_0,v_1,v_2)\in K$ dann gilt: Die Seiten $s(v_0,v_1)\in K,s(v_0,v_2)\in K,s(v_1,v_2)\in K$ sowie die Punkte $s(v_0)\in K,s(v_1)\in K,s(v_2)\in K$ liegen in K.
+	\item Der Durchschnitt von zwei Simplexen die in K liegen ist entweder leer oder \textbf{genau} ein gemeinsames Teilsimplex.\\
+	Also schneiden sich zwei Simplexe entweder gar nicht, in genau einem Punkt oder genau einer vollständigen Seite, usw
+\end{enumerate}
+Simplizialkomplexe entstehen durch \hyperref[verklebung]{verkleben} von Simplexen.
+\end{titleDef}
+
+\begin{titleDef}{konvexe Polyeder}
+\label{konvexPoly}
+Eine Teilmenge $P\subset\mathbb{R}^3$ heißt \textbf{konvexes Polyeder}, falls
+\begin{enumerate}
+	\item $P$ ist Durchschnitt von endlich vielen affinen Halbräumen\\
+	Ein affiner Halbraum kann man sich als die linke oder rechte Hälfte einer Ebene durch den $\mathbb{R}^3$ vorstellen.
+	\item $P$ ist beschränkt und nicht ganz in einer Ebene enthalten.
+	\item $P$ ist konvex, d.h. mit je zwei Punkten $p,q\in P$ liegt auch das Geradensegment $\overline{pq}$ ganz in $P$.
+\end{enumerate}
+Eigenschaft 3. ist nicht notwendig für einen konvexen Polyeder gilt aber wenn eine Teilmenge ein konvexes Polyeder ist.\par
+Ein Polyeder heißt (m,n)-\textbf{regulär}, falls alle Seitenflächen des Polyeders n-Gone sind also alle Kanten gleich lang sind und in jeder Ecke genau m solcher n-Gone /Kanten zusammentreffen.
+\end{titleDef}
+
+\begin{titleDef}{Reguläre Flächen}
+\label{regFlaeche}
+Eine Teilmenge $S\subset\mathbb{R}^3$ heißt \textbf{reguläre Fläche}, falls es zu jedem Punkt $p\in S$ eine \hyperref[offen]{offene} \hyperref[Umgebung]{Umgebung} $V$ um $p$ in $\mathbb{R}^3$, eine \hyperref[offen]{offene} \hyperref[Umgebung]{Umgebung} $U\subset\mathbb{R}^2$ und eine $C^\infty$-Abbildung die sogenannte \textbf{(lokale) Parametrisierung}
+$$x:U\to\mathbb{R}^3;\: (u,v)\mapsto x(u,v)=(x_1(u,v),x_2(u,v),x_3(u,v))$$
+gibt, so dass
+\begin{enumerate}[label=(\arabic*)]
+	\item $x(U)=S\cap V$ und $x:U\to S\cap V$ ist ein \hyperref[homoemorph]{Homöomorphismus} 
+	\item Die \hyperref[differenzial]{Ableitung} $dx(u,v):T_{(u,v)}\mathbb{R}^2\to T_{x(u,v)}\mathbb{R}^3$ ist injektiv für $(u,v)\in U$
+\end{enumerate}
+Bedingung (2) ist äquivalent zu
+\begin{enumerate}[label=(2\alph*)]
+	\item Die \hyperref[funktmatrix]{Funktionalmatrix} $\begin{pmatrix}
+		\frac{\partial x_1}{\partial u}(u,v)&\frac{\partial x_1}{\partial v}(u,v)\\
+		\frac{\partial x_2}{\partial u}(u,v)&\frac{\partial x_2}{\partial v}(u,v)\\
+		\frac{\partial x_3}{\partial u}(u,v)&\frac{\partial x_3}{\partial v}(u,v)\\
+		\end{pmatrix}$ hat Rang 2 für $(u,v)\in U$
+	\item Die Spaltenvektoren $x_u(u,v),\ x_v(u,v)$ sind linear unabhängig.
+	\item Das \hyperref[vektorprodukt]{Vektorprodukt} $x_u(u,v)\wedge x_v(u,v)\neq0$ für alle $(u,v)\in U$
+\end{enumerate}
+\end{titleDef}
+
+\begin{titleDef}{Polygon}
+\label{polygon}
+\label{innenwinkel}
+Sei $S$ eine \hyperref[regFlaeche]{reguläre Fläche}. Ein \textbf{Polygon} in $S$ ist eine Teilmenge $G$, die \hyperref[homoemorph]{homöomorph} zu einer \hyperref[abgeschlossen]{abgeschlossenen} Kreisscheibe ist und deren Rand $\partial G$ das Bild einer \hyperref[einfachgeschlossen]{einfach geschlossenen}, stückweise \hyperref[regulaer]{regulären} Kurve ist. Die \textbf{Innenwinkel} des Polygons sind durch $\alpha_i=\pi-\delta_i$ mit den \hyperref[aussenwinkel]{Außenwinkeln} $\delta_i$
+\end{titleDef}
+
+\begin{titleDef}{geodätische Dreiecke}
+\label{geodaetischeDreiecke}
+Ein \textbf{geodätisches Dreieck} in einer \hyperref[regFlaeche]{regulären Fläche} S ist ein \hyperref[polygon]{Polygon} $\Delta$, das genau drei Ecken hat und dessen drei Randsegmente/Kanten \hyperref[geodaetische]{Geodätische} sind.\par
+Seien $\alpha,\beta,\gamma$ die Innenwinkel des geodätischen Dreiecks. Für die Innenwinkelsumme eines geodätischen Dreiecks in einer Fläche $S$ die konstante \hyperref[gausskruemmung]{Gaußkrümmung K} haben gilt:
+\begin{itemize}
+	\item Für $K\equiv0\Longrightarrow \alpha+\beta+\gamma=\pi$
+	\item Für $K\equiv1\Longrightarrow \alpha+\beta+\gamma>\pi$
+	\item Für $K\equiv-1\Longrightarrow \alpha+\beta+\gamma<\pi$
+\end{itemize}
+\end{titleDef}

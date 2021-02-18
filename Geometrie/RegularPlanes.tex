@@ -1,0 +1,158 @@
+\begin{titleDef}{Rotations-Fläche}
+\label{rotFlaeche}
+\textbf{Rotations-Flächen} entstehen durch Rotation einer \hyperref[kurve]{Kurve} in der xz-Ebene um die z-Achse (oder um eine andere Achse in einer anderer Ebene).\\
+Die \hyperref[kurve]{Kurve} in der xz-Ebene ist von der Form $c(v)=(r(v),0,h(v))$ für $v$ in einem Intervall $(a,b)$ und differenzierbare Funktionen $h,r$ mit $r(v)>0$.
+Die \hyperref[parametrisierung]{parametrisierung} für die erzeugte reguläre Fläche ist gegeben durch:
+$$x(u,v)=(r(v)cos(u),r(v)sin(u),h(v)) \text{  für  } u\in(0,2\pi),v\in(a,b)$$ 
+Die Ableitungen bzw Jacobi-Matrix von $x$ ist gegeben durch:
+$$x_u(u,v)=\frac{\partial x}{\partial u}(u,v)=
+\begin{pmatrix} -r(v)sin(u)\\r(v)cos(u)\\0\end{pmatrix}\qquad
+x_v(u,v)=\frac{\partial x}{\partial v}(u,v)=
+\begin{pmatrix} r^\prime(v)cos(u)\\r^\prime(v)cos(u)\\h^\prime(v)\end{pmatrix}$$
+$$D(u,v)=\frac{\partial x}{\partial(u,v)}(u,v)=
+\begin{pmatrix}
+	-r(v)sin(u)&r^\prime(v)cos(u)\\
+	r(v)cos(u)&	r^\prime(v)cos(u)\\
+	0&h^\prime(v)
+\end{pmatrix}$$
+Damit dadurch eine tatsächliche reguläre Fläche definiert wird müssen $x_u$ und $x_v$ linear unabhängig sein also $x_u$ und $x_v$ dürfen nicht gleichzeitig verschwinden.\\
+$$\Leftrightarrow \nexists(u,v)\in\mathbb{R}^2:x_u(u,v)=x_v(u,v)=\begin{pmatrix}0\\0\\0\end{pmatrix}$$\par
+\textbf{Beispiel 2-Sphäre:} Die \hyperref[sphere]{2-Sphäre $S^2_R$} vom Radius R erhält man als Rotationsfläche mittels Rotation eines Kreises vom Radius R (siehe Bild).\\
+Demnach ist $r(v)=R\cos(v)$ und $h(v)=R\sin(v),\;\; v\in(-\pihalf,\pihalf)$ und 
+$$x(u,v)=(R\cos(u)\cos(v),R\sin(u)\cos(v),\sin(v))$$
+$$D(u,v)=\frac{\partial x}{\partial(u,v)}=\begin{pmatrix}
+	-R\cos(v)\sin(u)&-R\sin(v)\cos(u)\\
+	R\cos(v)\cos(u)&-R\sin(v)\sin(u)\\
+	0&-R\cos(v)
+\end{pmatrix}$$
+Solange $r(v)=R\cos(v)>0$ ist, sind die Spalten linear unabhängig und damit x eine \hyperref[parametrisierung]{lokale Parametriesierung} die $S^2_R$ zu einer regulären Fläche macht.\par
+Zu einer gegebenen Kurve $c:[0,L]\to\mathbb{R}^3;\: t\mapsto(\varphi(t),0,\psi(t))$ ist eine Rotationsfläche durch folgende Parametrisierung gegeben:
+$$(u,v)\mapsto\begin{pmatrix}
+	\cos(u)\varphi(v)\\\sin(u)\varphi(v)\\\psi(v)
+\end{pmatrix}$$
+Eventuell muss man weil die Ränder in einer Parametrisierung von $(0,2\pi)$ fehlen noch eine zweite, aber identische Parametrisierung von $(-\pi,\pi)$ o.ä wählen\\
+Damit die Rotationsfläche dann auch wirklich eine reguläre Fläche ist muss man noch zeigen das die Parametrisierung(-en) $C^\infty$ und bijektiv sind, sowie das die Funktionalmatrix Rang 2 hat also $x_u,x_v$ linear unabhängig etc siehe \hyperref[parametrisierung]{Parametrisierung}\par
+Die \hyperref[gausskruemmung]{Gaußkrümmung} einer Rotationsfläche mit Parametrisierung
+$$(u,v)\mapsto(\varphi(u)\cos(u),\varphi(u)\sin(u),\psi(v))$$ ist gegeben durch:
+$$K=\frac{\psi^\prime(\varphi^\prime\psi^{\prime\prime}-\varphi^{\prime\prime}\psi^\prime)}{((\varphi^\prime)^2+(\psi^\prime)^2)^2\varphi}\qquad K(x(u,v))=\frac{\psi^\prime(v)(\varphi^\prime(v)\psi^{\prime\prime}(v)-\varphi^{\prime\prime}(v)\psi^\prime(v))}{(\varphi^\prime(v)^2+\psi^\prime(v)^2)^2\varphi(v)}$$
+Dies ist eine Rotation um die z-Achse. Für ein Beispiel für Rotation um x-Achse siehe \hyperref[grosskreis]{Großkreise}.
+\end{titleDef}
+
+\begin{titleDef}{Affine Ebene}
+\label{affinEbene}
+Für $a_0,a,b\in\mathbb{R}^3$ mit $a,b$ linear unabhängig ist 
+$$S=\{a_0+ua+vb| \ u,v\in\mathbb{R}\}$$
+eine reguläre Fläche mit der einzigen, globalen \hyperref[parametrisierung]{Parametrisierung}:
+$U=\Rtwo,V=\Rthree$ und $x:U\to\Rthree;\: (u,v)\mapsto a_0+ua+vb$. Es gilt dann offensichtlich: $x_u=a,x_v=b,T_pS=\{p\}\times Span(a,b)\cong S$\par
+Die \hyperref[fundamentalformEins]{1.Fundamentalform} der affinen Ebene die durch beliebiges $a_0\in\Rthree$ und orthonormierten Vektoren $a,b\in\Rthree,\lVert a\rVert=\lVert b\rVert = 1$ und $a\perp b$ ist gegeben durch:
+$$E(u,v)=\langle a,a\rangle=1, F(u,v)=\langle a,b\rangle=0,G(u,v)=\langle b,b\rangle=1$$
+$$\begin{pmatrix}
+	E(u,v)&F(u,v)\\
+	F(u,v)&G(u,v)
+\end{pmatrix}=
+\begin{pmatrix}
+1&0\\
+0&1
+\end{pmatrix}$$
+\par
+Für die affine Ebene aufgespannt von $a$ und $b$ ist der \hyperref[normalenvektor]{normalenvektor}
+$$n(p)=n=\frac{x_u\wedge x_v}{\lVert x_u\wedge x_v\rVert}=\frac{a\wedge b}{\lVert a\wedge b\rVert}=\begin{pmatrix}
+	0\\0\\1
+\end{pmatrix}$$
+\par
+Die \hyperref[fundamentalzweite]{2.Fundamentalform} einer affinen Ebene ist nach obigen Rechnungen:
+$$x_{uu}=x_{uv}=x_{vu}=x_{vv}=0 \text{ und } n=c \: ,c\text{ konstant}$$
+$$\mathrm{II}(u,v)=
+\begin{pmatrix} 
+	\langle x_{uu},n\rangle & \langle x_{uv},n\rangle\\
+	\langle x_{vu},n\rangle & \langle x_{vv},n\rangle
+\end{pmatrix}=
+\begin{pmatrix}
+	0&0\\
+	0&0
+\end{pmatrix}$$
+\par
+Für die \hyperref[gausskruemmung]{Gauß-Krümmung} ergibt sich demnach:
+$$K(x(u,v))=\frac{det(\mathrm{II}(x(u,v)))}{det(\mathrm{I}(x(u,v)))}=\frac{0}{1}=0$$
+\end{titleDef}
+
+\begin{titleDef}{Zylinder}
+\label{zylinder}
+Sei $S=\{(x_1,x_2,x_3)\in\Rthree|\ x_1^2+x_2^2=r^2\}$ ein Zylinder mit Radius $r$.\\
+Eine (lokale) Parametrisierung ist gegeben durch:
+$$x(u,v)=(r\cos u,r\sin u,v),\qquad (u,v)\in(0,2\pi)\times\mathbb{R}$$
+$$x_u(u,v)=(-r\sin u,r\cos u,0)\qquad x_v(u,v)=(0,0,1)$$
+Damit ist die \hyperref[fundamentalformEins]{1.Fundamentalform}:
+$$\begin{pmatrix}
+	E(u,v)&F(u,v)\\
+	F(u,v)&G(u,v)
+\end{pmatrix}=
+\begin{pmatrix}
+	r^2&0\\
+	0&1
+\end{pmatrix}$$
+\par
+Für den Zylinder mit obiger Parametrisierung gilt für den \hyperref[normalenvektor]{Normalenvektor}:
+$$x_u\wedge x_v=(r\cos u,r\sin u,0)$$
+$$\Longrightarrow n(u,v)=\frac{x_u\wedge x_v}{\lVert x_u\wedge x_v\rVert}=\frac{(r\cos u,r\sin u,0)}{\lVert (r\cos u,r\sin u,0)\rVert}=(\cos u,\sin u,0)$$
+\par
+Damit ist die 2.Fundamentalform gegeben durch:
+$$x_{uu}=(-r\cos u, -r\sin u,0),x_{uv}=x_{vu}=x_{vv}=(0,0,0)$$
+$$\mathrm{II}(u,v)=
+\begin{pmatrix} 
+	\langle x_{uu},n\rangle & \langle x_{uv},n\rangle\\
+	\langle x_{vu},n\rangle & \langle x_{vv},n\rangle
+\end{pmatrix}=
+\begin{pmatrix}
+	-r&0\\
+	0&0
+\end{pmatrix}$$
+\par
+Für die \hyperref[gausskruemmung]{Gauß-Krümmung} ergibt sich demnach:
+$$K(x(u,v))=\frac{det(\mathrm{II}(x(u,v)))}{det(\mathrm{I}(x(u,v)))}=\frac{0}{r^2}=0$$
+\end{titleDef}
+
+\begin{titleDef}{Die 2-Sphäre}
+\label{regSphere}
+Die 2-Sphäre $S_R^2$ vom Radius $R$ ist eine reguläre Fläche mit Parametrisierung:
+$$x(\theta,\varphi)=(R\cos\theta\cos\varphi,R\cos\theta\sin\varphi,R\cos\theta)\: (\theta,\varphi)\in(-\pihalf,\pihalf)\times(0,2\pi)$$
+$$x_\theta(\theta,\varphi)=(-R\sin\theta\cos\varphi,-R\sin\theta\sin\varphi,R\cos\theta)$$
+$$x_\varphi(\theta,\varphi)=(-R\cos\theta\sin\varphi,R\cos\theta\cos\varphi,0)$$
+Die \hyperref[fundamentalformEins]{1.Fundamentalform} ist gegeben durch:
+$$\begin{pmatrix}
+	E(u,v)&F(u,v)\\
+	F(u,v)&G(u,v)
+\end{pmatrix}=
+\begin{pmatrix}
+	R^2&0\\
+	0&R^2\cos^2\theta
+\end{pmatrix}$$
+\par
+Für die 2-Sphäre $S_R^2$ vom Radius $R$ mit obiger Parametrisierung $x$ und partiellen Ableitungen $x_\theta,x_\varphi$ ist:
+$$x_\theta\wedge x_\varphi=-R\cos(\theta)\cdot x(\theta,\varphi)$$
+Damit ist $n(\theta,\varphi)$ parallel zu $x(\theta,\varphi)$ und der Normalenvektor ist\\ $n(u,v)=-\frac{1}{R}\cdot x(u,v)$\par
+Damit gilt für die \hyperref[fundamentalzweite]{2.Fundamentalform}:
+$$x_{\theta,\theta}=-x,\:\: x_{\theta\varphi}=x_{\varphi\theta}=(-R\sin\theta\sin\varphi,-R\sin\theta,\cos\varphi,0)$$ $$x_{\varphi\varphi}=(-R\cos\theta\cos\varphi,-R\cos\theta\sin\varphi,0)$$
+$$\mathrm{II}(u,v)=
+\begin{pmatrix} 
+	\langle x_{uu},n\rangle & \langle x_{uv},n\rangle\\
+	\langle x_{vu},n\rangle & \langle x_{vv},n\rangle
+\end{pmatrix}=
+\begin{pmatrix}
+	R&0\\
+	0&R\cos^2\theta
+\end{pmatrix}$$
+\par
+Für die \hyperref[gausskruemmung]{Gauß-Krümmung} ergibt sich demnach:
+$$K(x(u,v))=\frac{det(\mathrm{II}(x(u,v)))}{det(\mathrm{I}(x(u,v)))}=
+\frac{R^2\cos^2\theta}{R^2\cos^2\theta}=\frac{1}{R^2}$$
+\end{titleDef}
+
+\begin{titleDef}{Graphen von Funktionen}
+\label{regGraph}
+Sei $U$ eine \hyperref[offen]{offene} Teilmenge des $\Rtwo$ unnd $f:U\to\mathbb{R}$ eine $C^\infty$ Funktion. Der \textbf{Graph} von f ist:
+$$S=\{(x_1,x_2,x_3)\in\Rthree|\ (x_1,x_2)\in U,x_3=f(x_1,x_2)\}$$
+$S$ ist eine reguläre Fläche mit der \hyperref[parametrisierung]{Parametrisierung}
+$$x:U\to\Rthree;\: (u,v)\mapsto(u,v,f(u,v))$$\par
+Umgekehrt kann man zeigen: Ist $S$ eine reguläre Fläche in $\Rthree$ so existiert zu jedem Punkt $p\in S$ eine geeignete \offUm $W\subset\Rthree$, so dass $W\cap S$ ein Graph einer $C^\infty$-Funktion ist.
+\end{titleDef}

@@ -1,0 +1,38 @@
+\begin{titleDef}{Karte}
+\label{Karte}
+Eine \textbf{Karte} ist ein Paar $(U,\varphi)$ mit Eigenschaft (1) einer \hyperref[Mannigfaltigkeit]{(topologischen) Mannigfaltigkeit $M$}. Der \Toporeflong~Raum $M$ ist also \hyperref[lokaleukldisch]{lokal euklidisch} d.h $U$ ist offene Umgebung um eine Menge von Punkten $p\in M$ und $\varphi:U\to\varphi(U)\subseteq\mathbb{R}^n$ ein \hyperref[homoemorph]{Homöomorphismus}.
+\par
+\begin{rawDef}
+\label{vertraeglich}
+Eine Karte $(V,\psi)$ heißt \textbf{verträglich} mit einem Atlas $\mathcal{A}$, falls für alle Kartengebiete $U_i$ aus $\mathcal{A}$ die einen nichtleeren Schnitt mit $V$ haben $U_i\cap V\neq\emptyset$ der \textit{Kartenwechsel} $\psi\circ\varphi^{-1}\: C^\infty$ ist. 
+\end{rawDef}
+\end{titleDef}
+
+\begin{titleDef}{Atlas}
+\label{Atlas}
+Ein \textbf{Atlas} für eine \hyperref[Mannigfaltigkeit]{Mannigfaltigkeit} $M$ist eine Menge $\mathcal{A}=\{(U_i,\varphi_i)|\ i\in I\}$ von Karten mit $\bigcup_{i\in I}U_i = M$\par
+Ein \textbf{Atlas} heißt $C^\infty$, falls alle möglichen \textit{Kartenwechsel} $C^\infty$-Abbildungen (also unendlich oft stetig differenzierbar) zwischen den offenen Teilmengen von $\mathbb{R}^n$ der entsprechenden Karten sind.
+\end{titleDef}
+
+\begin{titleDef}{maximaler Atlas}
+\label{maxAtlas}
+Erweitert man einen $C^\infty$ Atlas $\mathcal{A}$ mit allen mit $\mathcal{A}$ \textit{verträglichen} Karten erhält man einen \textbf{maximalen Atlas}.
+\end{titleDef}
+
+\begin{titleDef}{Dimension}
+\label{dimMannigfaltigkeit}
+Die \textbf{Dimension} einer Mannigfaltigkeit ist der konkrete Wert für $n$ aus der Definition (1) für die \hyperref[lokaleukldisch]{lokale euklidizität} von $\varphi:U\to\varphi(U)\subseteq\mathbb{R}^n$ also welchem euklidischen Raum die Mannigfaltigkeit lokal entspricht.\\(z.b der Ebene $\mathbb{R}^2 \Rightarrow$~Dimension 2, oder dem Raum $\mathbb{R}^3\Rightarrow$~Dimension 3)
+\end{titleDef}
+
+\begin{titleDef}{Kartenwechsel}
+\label{Kartenwechsel}
+Sei $M$ eine topologische Mannigfaltigkeit mit Atlas $\mathcal{A}$. Weiter seien $(U,\varphi),\ (V,\psi)$ zwei Karten mit nichtleerem Durchschnitt $U\cap V=D$ und $p\in D$.
+Dann wird durch 
+$$\psi \circ\varphi^{-1}:\varphi(D)\subset\mathbb{R}^n\to\psi(D)\subset\mathbb{R}^n$$
+ein \textbf{Kartenwechsel} definiert. Als Komposition von \hyperref[homoemorph]{homöomorphen} Abbildungen ist dieser wieder \hyperref[homoemorph]{homöomorph}.
+\end{titleDef}
+
+\begin{titleDef}{Existenz Triangulierung}
+\label{existenzTriangulierung}
+Jede \hyperref[kompakt]{kompakte}, \hyperref[orientierbar]{orientierbare} 2-Mannigfaltigkeit $M$ mit Atlas $\mathcal{A}$ besitzt eine \hyperref[triangulierung]{Triangulierung} $\delta_k:\Delta\to\delta_k(\Delta)\subset M$, so dass jedes \hyperref[simplex]{Simplex} $\delta_k(\Delta)$ ganz in einer Kartenumgebung von $\mathcal{A}$ enthalten ist.
+\end{titleDef}

@@ -1,0 +1,17 @@
+\begin{rawDef}
+\begin{enumerate}
+	\item Für eine \hyperref[offen]{offene} Teilmengen $U\subset\mathbb{R}^n$ bezügliche der \hyperref[stdTopo]{standard-Topologie} ist ein Atlas $\mathcal{A}$ durch $\mathcal{A}=\{(U,id_{|U})\}$ bestehend aus genau dieser einen Karte definiert. Der zugehörige \hyperref[maxAtlas]{maximale Atlas} heißt der kanonische maximale Atlas.
+	\item \hyperref[regFlaeche]{Reguläre Flächen} in $\mathbb{R}^3$ sind spezielle 2-dimensionale differenzierbare Mannigfaltigkeiten.
+	\item Die \hyperref[ndimsphere]{n-Sphären} $S^n_R=\{x\in\mathbb{R}^{n+1}|\ \lVert x\rVert=R\}$ sind n-dimensionale differenzierbare Mannigfaltigkeiten. Seien $N=(0,\ldots,0,R), S=(0,\ldots,0,-R)$ der \hyperref[pol]{Nord-/Südpol} und $U_1=S_R^n\setminus\{N\},\: U_2=S_R^n\setminus\{S\}$ die Sphären ohne Nord-/Südpol also insbesondere offene Mengen. Weiter seien $\varphi_1,\varphi_2$ \hyperref[stereoproj]{die steoreographischen Projektionen} vom Nord-/Südpol, also
+	$$\varphi_1:U_1\to\mathbb{R}^n;p=(p_1,\ldots,p_{n+1})\mapsto(x_1(p),\ldots,x_{n+1}(p)) \text{  mit }x_i(p)=\frac{Rp_i}{R-p_{n+1}}$$
+	$$\varphi_2:U_2\to\mathbb{R}^n;p=(p_1,\ldots,p_{n+1})\mapsto(x_1(p),\ldots,x_{n+1}(p)) \text{  mit }x_i(p)=\frac{Rp_i}{R+p_{n+1}}$$
+	Die Kartenwechsel sind gegeben durch:
+	$$\varphi_1\circ\varphi_2^{-1}(x)=\varphi_2\circ\varphi_1^{-1}(x)=R^2\frac{x}{\lVert x\rVert^2}$$
+	Damit ist $\{(U_1,\varphi_1),(U_2,\varphi_2)\}$ ein Atlas der zu einem \hyperref[maxAtlas]{maximalen Atlas} erweitert werden kann. Weil $S_R^n$ als Teilraum von $\mathbb{R}^{n+1}$ \hyperref[hausdorffsch]{hausdorffsch} ist und eine abzählbare \hyperref[basisTopo]{Basis} hat folgt die n-dimensionale Mannigfaltigkeit.
+	\item Der \hyperref[projRaum]{Projektive Raum} $P^n$ ist eine \hyperref[kompakt]{kompakte}, n-dimensionale differenzierbare Mannigfaltigkeit. Die Karten sind gegeben durch:
+	$$\tilde{U}_i=\{x\in S^n|\ x_i\neq0\},\:\: U_i=\pi(\tilde{U}_i)=[\tilde{U}_i]$$
+	$$\varphi_i:U_i\to\mathbb{R}^n;\:\: \varphi_i([x])=\left(\frac{x_1}{x_i},\ldots, \frac{x_{i-1}}{x_i},\frac{x_{i+1}}{x_i},\ldots,\frac{x_{n+1}}{x_i}\right)$$
+	\item Sind $M,N$ m-/n-dimensionale differenzierbare Mannigfaltigkeiten, so ist die m+n-dimensionale Produkt-Mannigfaltigkeit ebenfalls differenzierbar.\\
+	Für Karten $(U,\varphi)$ um $p\in M$ und $(V,\psi)$ um $q\in N$ ist $(U\times V,\varphi\times\psi)$ eine Karte um $(p,q)\in M\times N$
+\end{enumerate}
+\end{rawDef}

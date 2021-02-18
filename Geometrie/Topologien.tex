@@ -1,0 +1,92 @@
+\begin{titleDef}{Triviale Topologie}
+\label{trivTopo}
+Die kleinstmögliche Topologie $(X,\mathcal{O}_t)$ mit $\mathcal{O}_t=\{X,\emptyset\}$ heißt \mbox{\textbf{triviale Topologie}} auf $X$
+\end{titleDef}
+
+\begin{titleDef}{Diskrete Topologie}
+\label{diskTopo}
+Die größtmögliche Topologie $(X,\mathcal{O}_d)$ mit $\mathcal{O}_d=\mathcal{P}(X)$ heißt \mbox{\textbf{diskrete Topologie}} auf $X$
+\end{titleDef}
+
+\begin{titleDef}{Standard Topologie}
+\label{stdTopo}
+Sei $X=\mathbb{R}$ die Menge der reellen Zahlen und\\ ${\mathcal{O}_s=\{I\subseteq\mathbb{R}| \ I=\text{Vereinigung von offenen Interevallen} (a,b),a,b\in\mathbb{R}\}}$\\
+dann heißt $(X,\mathcal{O}_s)$ die \mbox{\textbf{Standardtopologie}} auf $\mathbb{R}$.
+Die Standardtopologie hat eine abzählbare Basis.\\
+Die Standardtopologie bezüglich den reellen Zahlen $(\mathbb{R},\mathcal{O}_s)$ ist \hyperref[hausdorffsch]{hausdorffsch}\\
+Die reellen Zahlen $\mathbb{R}$~mit der Standard-Topologie und auch alle Intervalle $I\subset\mathbb{R}$~sind \hyperref[zusammenhang]{zusammenhängend}
+\end{titleDef}
+
+\begin{titleDef}{Metrisch induzierte Topologie}
+\label{metTopo}
+\hyperref[MetrischerRaum]{Metrische Räume} (X,d) sind topologische Räume, also wird durch eine \hyperref[Metrik]{Metrik} eine Topolgie induziert, die aus den \hyperref[doffen]{d-offenen} Mengen von X besteht.
+\\Die Topologie induziert von der \hyperref[stdmetrik]{Standard Metrik} hat eine abzählbare Basis bestehend aus allen rationalen \hyperref[balloffen]{Bällen} mit rationalen Radien und rationalen Zentren.
+\end{titleDef}
+
+\begin{titleDef}{Basis}
+\label{basisTopo}
+Sei \Topo ein \Toporef. Eine \textbf{Basis} für die Topologie $\mathcal{O}$ ist eine Teilmenge $\mathcal{B}\subseteq\mathcal{O}$ so dass für jede offene Menge $V\neq\emptyset, V\in\mathcal{O}$ gilt:
+$$V=\bigcup_{i\in I}V_i, \ V_i\in\mathcal{B}$$
+\end{titleDef}
+
+\begin{titleDef}{Teilraumtopologie}
+\label{teilraumTopo}
+Sei $(X,\mathcal{O}_X)$ ein topologischer Raum und $Y\subset X$ eine Teilmenge von X. Die \mbox{\textbf{Teilraumtopologie}} von Y ist gegeben durch 
+$$\mathcal{O}_Y=\{U\subseteq Y|\ U\cap Y \text{ für ein }V\in\mathcal{O}_X\}$$
+und macht damit $(X,\mathcal{O}_Y)$ zu einem topolgischen Raum bezüglich dieser Teilraumtopologie
+\end{titleDef}
+
+\begin{titleDef}{Produkttopologie}
+\label{produktTopo}
+Seien $(X,\mathcal{O}_X),\ (Y,\mathcal{O}_Y)$ zwei topolgische Räume. Eine Teilmenge $W\subseteq X\times Y$ ist offen in der \mbox{\textbf{Produkt-Topologie}} wenn es zu jedem Punkt $(x,y)\in W$ eine \hyperref[Umgebung]{Umgebung} $U\subseteq X$ von x und eine \hyperref[Umgebung]{Umgebung} $V\subseteq Y$ von y gibt, so dass $U\times V\subseteq W$ gilt.\\
+Also man findet um jeden Punkt einer offenen Menge koordinatenweise offene Mengen bezüglich der komponententopologien die vollständig in einer Umgebung der entsprechenden Menge liegt.
+\end{titleDef}
+
+\begin{titleDef}{Quotiententopologie}
+\label{quotTopo}
+Sei $(X,\mathcal{O}_X)$ ein topologischer Raum und $\sim$ eine Äquivalenzrelation auf der Menge $X$. Die Äquivalenzklasse eines Elementes $x\in X$ ist gegeben durch $[x]=\{y\in X|\ x\sim y\}$.Die Äquivalenzklassen bilden eine Partition von $X$ sind also eine disjunkte Zerlegung dessen Vereinigung wieder den Gesamtraum ergibt. $X/\sim$ ist dann der zugehörige Qutienten-Raum auf dem die \textbf{Quotiententopologie} definiert ist.
+$$\pi:X\to X/\sim;\ x\mapsto[x]$$
+ist die kanonische Projektion die Elemente auf ihre Äquivalenzklasse abbildet. $\pi$ ist eine \hyperref[stetig]{stetige Funktion} (insbesondere ist damit auch $\pi\times\pi:X\times X\to Y\times Y)$ usw. stetig in der Produkttopologie wobei $\pi^{-1}(U,V)=\pi^{-1}(U)\times \pi^{-1}(V)$).\\
+Die \textbf{Quotiententopologie} $(X/\sim,\mathcal{O}_{X/\sim})$ ist dann definiert durch die offenen Mengen:
+$$U\subseteq X/\sim offen \Longleftrightarrow \pi^{-1}(U)=\{x\in X|\ \pi(x)=[x]\in U\} offen in X$$
+Also eine Menge $U$ ist offen bezüglich der Quotiententopologie, wenn die Menge der Urbilder der Äquivalenzklassen die in der $U$ liegen eine offene Menge bezüglich der Topologie auf $X$ bilden.
+\end{titleDef}
+
+
+\begin{titleDef}{Projektiver Raum $P^n$}
+	\label{projRaum}
+	Der projektive Raum ist eine abstrakte \hyperref[Mannigfaltigkeit]{Mannigfaltigkeit} deren Elemente gerade die Geraden in $\mathbb{R}^{n+1}$ durch den Nullpunkt sind. Definiere also den projektiven Raum $P^n=\{\text{eindimensionale Unterräume von }\mathbb{R}^{n+1}\}$.\par
+	Um $P^n$ zu einem topologischen Raum zu machen gibt es zwei Betrachtungsmöglichkeiten:
+	\begin{enumerate}[label=(\alph*)]
+		\item Definiere auf $\mathbb{R}^{n+1}\setminus\{0\}$ die Äquivalenzrelation
+		$$x\sim y\Longleftrightarrow\ \exists\lambda\neq0 \text{ mit }x= \lambda y$$
+		Dann ist $P^n=\mathbb{R}^{n+1}\setminus\{0\}/\sim$
+		\item Definiere auf der \hyperref[ndimsphere]{n-Sphäre} $S_1^n=S^n$ die Äquivalenzrelation ${x\sim y\Longleftrightarrow x=-y}$. Eine Äquivalenzklasse ist also gegeben durch $[x]=\{x,-x\}$ und $P^n=S^n/\sim$
+	\end{enumerate}
+Damit kann als \hyperref[Topologie]{Topologie} von $P^n$ die \hyperref[quotTopo]{Quotienten-Topologie} von $S^n/\sim$ definieren.\\
+$P^n$ ist eine \hyperref[kompakt]{kompakte} \hyperref[diffMannigfaltigkeit]{n-dimensionale differenzierbare Mannigfaltigkeit}.\\
+Insbesondere ist $P^n$ \hyperref[hausdorffsch]{hausdorffsch} und hat eine \hyperref[basisTopo]{abzählbare Basis}\par
+Ein Atlas $\mathcal{A}=\{(U_i,\varphi_i)|\: i=1,\ldots,n+1\}$ ist gegeben durch:
+$$U_i=\{[(x_1,\ldots,x_{n+1})]\in P^n|\ x_i\neq0\}$$
+$$\varphi_i:U_i\to\mathbb{R}^n;\:\:[(x_1,\ldots,x_{n+1})]\mapsto\varphi_i([(x_1,\ldots,x_{n+1})])=\frac{1}{x_i}(x_1,\ldots,x_{i-1},x_{i+1},\ldots,x_{n+1})$$
+Die Umkehrabbildung ist einfach gegeben durch:
+$$\varphi_i^{-1}:\mathbb{R}^n\to U_i\:\:\:(x_1,\ldots,x_n)\mapsto[(x_1,\ldots,x_{i-1},1,x_{i+1},\ldots,x_{n+1})]$$
+und natürlich ist auch $\varphi_i^{-1}$ stetig (muss es ja sein damit wir eine diffbare Mannigfaltigkeit bekommen)
+\end{titleDef}
+
+\begin{titleDef}{Simplizial topologischer Raum}
+\label{simplexTopo}
+Ein \hyperref[simplex]{Simplizialkomplex} $K$ kann zu einem topologischen Raum erweitert werden. Die Menge $\lvert K\rvert=\bigcup_{s\in K}s\subset\mathbb{R}^n$ versehen mit der \hyperref[teilraumTopo]{Teilraum-Topologie} von $\mathbb{R}^n$ heißt der zum Simplizialkomplex $K$ gehörende topologische Raum.
+\end{titleDef}
+
+\begin{titleDef}{Klassifikation 2-dimensionaler Mannigfaltigkeiten/Geschlecht}
+\label{geschlecht}
+Sei $M$ eine \hyperref[kompakt]{kompakte} \hyperref[orientierbar]{orientierbare} 2-dimensionale topologische Mannigfaltigkeit. Dann gibt es eine natürliche Zahl $\mathbb{N}\ni g\geq 0$ das sogenannte \textbf{Geschlecht}. Es gilt:
+\begin{itemize}
+	\item Die Sphäre $S^2_R$ hat Geschlecht 0
+	\item Der Torus hat Geschlecht 1
+	\item Falls $g=0$ so ist $M$ \hyperref[homoemorph]{homöomorph} zur \hyperref[sphere]{Sphäre} $S^2=S^2_1$
+	\item Falls $g\geq1$ so ist $M$ \hyperref[homoemorph]{homöomorph} zu einer \hyperref[zusammenhang]{zusammenhängenden} Summe von $g$ \hyperref[torus]{Tori}.
+	\item Zwei \hyperref[kompakt]{kompakte} \hyperref[orientierbar]{orientierbare} Flächen/Mannigfaltigkeiten mit gleichen Geschlecht immer homöomorph
+\end{itemize}
+\end{titleDef}

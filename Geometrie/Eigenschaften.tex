@@ -1,0 +1,133 @@
+\begin{titleDef}{Offen}
+\label{offen}
+Elemente $\mathrm{A}\in\mathcal{O}$ wobei $\mathcal{O}$ eine \hyperref[Topologie]{Topologie} von X ist, heißen offen bezüglich der \hyperref[Topologie]{Topologie} $\mathcal{O}$.\par
+Aus der Definition der \hyperref[abgeschlossen]{Abgeschlossenheit} kann man umgekehrt folgern:\\
+Eine Menge $B\subseteq X$ ist offen $\Leftrightarrow\ B$ ist das Komplement einer abgeschlossenen Teilmenge $C\subseteq X$ von $X\:\Leftrightarrow B=X\setminus C$ für $C$ abgeschlossen.\par
+Man kann auch wie folgt vorgehen um zu zeigen das eine Menge $U$ offen ist:
+\begin{enumerate}
+	\item Wähle einen beliebigen Punkt $x\in U$ und zeige das es dann eine offene Umgebung $\widetilde{U}_x$ um $x$ gibt also eine Menge $\widetilde{U}_x$ die offen ist und $x\in\tilde{U}_x$.
+	\item Zeige dann das $\widetilde{U}$ vollständig in $U$ liegt d.h $\widetilde{U}_x\subset U$
+	\item Da $x\in U$ jetzt beliebig gewählt war gibt es also zu jedem Punkt aus $U$ eine offene Umgebung die vollständig in $U$ liegt.
+	\item Da man $U$ durch die Menge aller Punkte $x\in U$ beschreiben kann und es für jeden solchen Punkt eine entsprechende Umgebung gibt, gilt insbesondere
+	$$U=\bigcup_{x\in U}\widetilde{U}_x$$
+	\item Damit ist $U$ als Vereinigung von offenen Teilmengen ebenfalls offen $\qed$
+\end{enumerate}
+\end{titleDef}
+
+\begin{titleDef}{d-offen}
+\label{doffen}
+Eine Menge $U\subseteq X$ ist \textbf{d-offen}, genau dann, wenn für alle $p\in U$ ein $\varepsilon=\varepsilon(p)>0$ existiert, so dass der offene Ball mit Radius $\varepsilon$ um p ganz in U liegt.
+$$U\subseteq X \text{d-offen}\Leftrightarrow\forall p\in U\ \exists\ \varepsilon>0:B_r(p)=\{x\in X|\ d(x,p)<r\}\subseteq U$$
+\end{titleDef}
+
+\begin{titleDef}{Abgeschlossen}
+\label{abgeschlossen}
+Eine Menge $\mathrm{A}\subseteq X$ heißt abgeschlossen, wenn $X\setminus\mathrm{A}$ offen ist. (Bezüglich einer \hyperref[Topologie]{Topologie} $(X,\mathcal{O})$)\par
+Sei $X$ ein \hyperref[hausdorffsch]{hausdorffscher} \hyperref[Topologie]{topologischer Raum} und $K\subset X$ eine \hyperref[kompakt]{kompakte} Teilmenge von $X$. Dann ist $K$ abgeschlossen.\par
+Hat man z.b eine Abbildung $f:K\to\mathbb{R}$ von einem Kompaktum $K\subset X$ die \hyperref[stetig]{stetig} ist. Folgt nach kompaktheitseigenschaft das $f(K)$ wieder kompakt ist und da $\mathbb{R}$ hausdorffsch ist und $Bild(f(K))\subset\mathbb{R}$ damit eine kompakte Teilmenge eines hausdorffschen topolgischen Raums ist (der $\mathbb{R}$ mit der \hyperref[stdTopo]{standard Topologie}) das $f(K)$ abgeschlossen ist.
+\end{titleDef}
+
+\begin{titleDef}{Hausdorffsch}
+\label{hausdorffsch}
+Ein \Toporeflong~\Topo ~heißt \textbf{hausdorffsch}, falls zu je zwei verschiedenen Punkten $p,q\in X, p\neq q$ disjunkte Umgebungen um p und q existieren.
+\begin{itemize}
+    \item \hyperref[MetrischerRaum]{Metrische Räume} sind hausdorffsch.
+    \item Die reellen Zahlen mit der \hyperref[stdTopo]{Standard-Topologie} $(\mathbb{R},\mathcal{O}_s)$ ist hausdorffsch.
+    \item Jeder Teilraum eines hausdorffschen Raumes ist wieder hausdorffsch.
+    \item Die \hyperref[ndimsphere]{n-dimensionalen Sphären} $S_R^n\subset\mathbb{R}^{n+1}$ sind als Teilraum von $\mathbb{R}^{n+1}$ selbst wieder hausdorffsch
+    \item In einem Hausdorff-Raum hat jede Folge höchstens einen Limespunkt
+    \item Topologische Räume X und Y sind Hausdorffsch\\ $\Leftrightarrow\ (X\times Y,\mathcal{O}_{X\times Y})$ offen bezüglich \hyperref[produktTopo]{Produkt-Topologie ist} 
+\end{itemize}
+\end{titleDef}
+
+\begin{titleDef}{Zusammenhang}
+\label{zusammenhang}
+Ein \Toporeflong \Topo ist \textbf{zusammenhängend}, falls $X$ und $\emptyset$ die einzigen sowohl offen als auch abgeschlossenen Teilmengen sind.\\
+Äquivalent dazu gilt: \\
+Ein \Toporeflong~X ist zusammenhängend genau dann wenn X nicht disjunkte Vereinigung von zwei offenen, nichtleeren Teilmengen von X ist.\\
+$$\Longleftrightarrow\nexists U,V\subseteq X:U\cap V=\emptyset, X=U\cup V, \;U,V\neq\emptyset$$
+Eine Teilmenge $A\subset X$ heißt zusammenhängend, falls sie bezüglich der \hyperref[teilraumTopo]{Teilraumtopologie} zusammenhängend ist.
+\listbsp
+\begin{enumerate}
+    \item Die reellen Zahlen $\mathbb{R}$~mit der \hyperref[stdTopo]{Standard-Topologie} und auch alle Intervalle $I\subset\mathbb{R}$~sind zusammenhängend
+\end{enumerate}
+Es gilt:
+\begin{enumerate}
+    \item Ist $A\subset X$~zusammenhängend, dann auch die \hyperref[abhuelle]{abgeschlossene Hülle }$\overline{A}$
+    \item Sind $A\subset X$ und $B\subset X$ ~zusammenhängend und $A\cap B\neq\emptyset$, so ist $A\cup B$~zusammenhängend
+    \item Ist $\{A_i\subset X|\ i\in I\}$~eine Familie von zusammenhängenden Teilmengen von X mit nichtleerem Durchschnitt, so ist auch die Vereinigung $\bigcup_{i\in I}A_i$~zusammenhängend.
+\end{enumerate}
+Stetige Bilder von (weg-)zusammenhängenden Räumen sind (weg-)zusammenhängend. Insbesondere sind zwei \hyperref[homoemorph]{homöomorphe} \hyperref[Topologie]{topologische Räume}~entwedet beide zusammenhängend oder beide nicht zusammenhängend\par
+Damit folgt auch direkt das vorgehen zum zeigen das ein topologischer Raum $X$ zusammenhängend ist:
+\begin{enumerate}
+	\item Definiere zwei Mengen $U,V\in\mathcal{O}_X$ die offen in $X$ sind und $X$ disjunkt zerlegen also $U\cap V=\emptyset$ und $U\cup V=X$.
+	\item Damit der Raum $X$ jetzt zusammenhängend ist (und nicht leer sein soll) darf nur eine der Mengen $U,V$ nichtleer sein also $U\neq\emptyset\Leftarrow V=\emptyset$ und umgekehrt.
+	\item Leite also aus bekanntem her das eine der beiden Mengen leer sein muss. z.B das $X$ eine Obermenge eines zusammenhängenden Raums $Y$ ist.
+	\item Nach \hyperref[teilraumTopo]{Teilraum topologie} gibt es dann $\widetilde{U},\widetilde{V}\in\mathcal{Y}$ sodass $U=X\cap\widetilde{U},V=X\cap\widetilde{V}$.
+	\item Es gilt dann auch $Y=Y\cap\widetilde{U}\cup Y\cap\widetilde{V}$ und weil $Y$ zusammenhängend ist ist entwedet $Y\cap\widetilde{U}$ oder $Y\cap\widetilde{V}$ die leere Menge
+	\item Dann müssen nur noch die Elemente aus $X$ betrachtet werden die nicht in $Y$ liegen das diese nicht in der anderen Menge $Y\cap\widetilde{U}$ oder $Y\cap\widetilde{V}$ liegen.
+\end{enumerate}
+\end{titleDef}
+
+\begin{titleDef}{Weg-Zusammenhang}
+\label{wegzusammenhang}
+Ein \Toporeflong~\Topo~ heißt \textbf{weg-zusammenhängend}, wenn es zu je zwei Punnkten $p,q\in X$~einen Weg zwischen p und q gibt.(d.h eine stetige Abbildung $\alpha:[0,1]\to X$~mit $\alpha(0)=p$~und $\alpha(1)=q$.\\
+Es gilt: \textbf{weg-zusammenhängend }$\Longrightarrow$ \textbf{ zusammenhängend}\par
+In \hyperref[Mannigfaltigkeit]{Mannigfaltigkeiten} ist weg-zusammenhang und zusammenhang äquivalent d.h es gilt auch die Rückrichtung\\
+\textbf{zusammenhängend }$\Longrightarrow$ \textbf{weg-zusammenhängend}\hfill \textit{also insgesamt}\\
+\textbf{zusammenhängend }$\Longleftrightarrow$ \textbf{weg-zusammenhängend}
+\end{titleDef}
+
+\begin{titleDef}{Kompaktheit}
+\label{kompakt}
+Ein \Toporeflong ~\Topo~heißt \textbf{kompakt} wenn jede offene Überdeckung von X eine \textit{endliche} Teilüberdeckung besitzt.D.h:
+$$X=\bigcup_{i\in I}U_i, U_i \text{ offen} \Longrightarrow \exists i_1,\ldots,i_k\in I, \text{so dass } X=U_{i_1}\cup\ldots\cup U_{i_k}$$
+Eine Teilmenge $A\subset X$ heißt \textbf{kompakt}, wenn A kompakt bezüglich der \hyperref[teilraumTopo]{Standard-Topologie} ist.
+\label{lokalkompakt}
+Ein topologischer Raum heißt \textbf{lokal kompakt}, wenn jeder Punkt aus X eine kompakte \hyperref[Umgebung]{Umgebung} hat.\par
+\hyperref[stetig]{Stetige Abbildungen} auf kompakten Räumen sind beschränkt.\par
+Die reellen Zahlen $\mathbb{R}$ mit der \hyperref[stdTopo]{Standard-Topologie} sind nicht kompakt, da $\mathbb{R}$ überabzählbar ist. Da aber jeder Punkt $x\in\mathbb{R}$ in einem abgeschlossenen Teilintervall $[x-\varepsilon,x+\varepsilon],\varepsilon>0$ liegt ist $\mathbb{R}$ aber lokal kompakt.\par
+\listbsp
+\begin{enumerate}
+	\item \hyperref[stetig]{Stetige Bilder} von kompakten Räumen sind kompakt.\par$\Longleftrightarrow$ \mbox{\hyperref[stetig]{Stetige Abbildungen} bilden kompakte Räume in kompakte Räume ab.}\par$\Longleftrightarrow$Für $f:X\to Y$ stetig, X kompakt gilt: $f(X)$ ist kompakt.
+	\item Falls X und Y \hyperref[homoemorph]{homöomorph} sind, dann ist X kompakt genau dann wenn Y kompakt ist. (d.h Kompaktheit ist eine topologische Invariante)\par$\Longleftrightarrow\;X\simeq Y \Rightarrow X \text{ komapkt}\Leftrightarrow Y \text{ kompakt}$
+	\item \hyperref[abgeschlossen]{Abgeschlossenen Teilräume}$\ \overline{X}$ von kompakten Räumen $X$ sind kompakt.
+	\item Produkte $X\times Y$ von kompakten Räumen sind kompakt 
+\end{enumerate}
+Ist $X$ ein \hyperref[hausdorffsch]{hausdorffscher Raum} und $K\subset X$ kompakt\par $\Rightarrow$ Dann ist $K$ \hyperref[abgeschlossen]{abgeschlossen}.
+\end{titleDef}
+
+\begin{titleDef}{lokal euklidisch}
+	\label{lokaleukldisch}
+	Ein \Toporeflong~$M$ ist \textbf{lokal euklidisch}, wenn für alle Punkte $p\in M$ eine \hyperref[offen]{offene} \hyperref[Umgebung]{Umgebung} $U$ von $p$ und ein \hyperref[homoemorph]{Homöomorphismus} ${\varphi:U\to \varphi(U)\subseteq\mathbb{R}^n}$ auf eine offene Teilmenge von $\mathbb{R}^n$ für gewisses n existiert.
+\end{titleDef}
+
+\begin{titleDef}{Orientierbarkeit}
+\label{orientierbar}
+Für die Vektoren $a=(a_1,a_2,a_3),\ b=(b_1,b_2,b_3)\in\mathbb{R}^3$ sind $a,b,a\wedge b$  positiv orientiert d.h det$(a,b,a\wedge b)>0$ (die Reihenfolge ist wichtig)\par
+Eine \hyperref[regFlaeche]{reguläre Fläche} $S$ (bzw eine \hyperref[diffMannigfaltigkeit]{differenzierbare Mannigfaltigkeit M}) heißt \textbf{orientierbar},  falls ein \hyperref[Atlas]{Atlas} von $S$ (bzw $M$) existiert, so dass alle \hyperref[Kartenwechsel]{Kartenwechsel} eine positive \hyperref[funktmatrix]{Funktionalmatrix} haben.\\
+Falls eine reguläre Fläche $S$ orientierbar ist gilt für die Parametrisierung $x:U\to S$, dass $det(x_u,x_v,x_u\wedge x_v)>0$\par
+Eine Basis $(a,b)$ von $T_pS$ ist positiv orientiert, falls $det(a,b,n(p))>0$.\\
+Die Randkurve von einem \aeGebiet ist \textbf{orientiert}, falls für die positiv orientierte Basis $(c^\prime,h)$ von $T_{c(s)}S$ der Vektor $h$ "auf die Seite von $G$" zeigt.
+\end{titleDef}
+
+\begin{titleDef}{Bogenlänge parametrisiert}
+\label{bogenlaenge}
+Sei $S$ eine \hyperref[regFlaeche]{reguläre Fläche} und $c(s)=x(u(s),v(s))\subset S\subset\Rthree $eine \hyperref[diffFlaechenkurve]{Flächenkurve}. Man kann $c$ so umparametrisieren dass $\lVert c^\prime(s)\rVert=\lVert \frac{dc}{ds}(s)\rVert=1$. Eine solche Kurve heißt \textbf{nach Bogenmaß parametrisiert}.
+\end{titleDef}
+
+\begin{titleDef}{regulär}
+\label{regulaer}
+Sei $c:[a,b]\to \Rthree;\ s\mapsto c(s)$ eine \hyperref[kurve]{differenzierbare Kurve}. $c$ heißt \textbf{regulär}, falls $c^\prime(s)\neq0$ für alle $s\in[a,b]$.\par
+Also eine Kurve ist genau dann regulär wenn sie in jedem Punkt differenzierbar ist.
+\end{titleDef}
+
+\begin{titleDef}{einfach geschlossen}
+\label{einfachgeschlossen}
+Sei $c:[a,b]\to \Rthree;\ s\mapsto c(s)$ eine \hyperref[kurve]{differenzierbare Kurve}. $c$ heißt \textbf{einfach geschlossen}, falls $c(a)=c(b)\text{ und }c^\prime(a)=c^\prime(b)$ und $c$ eingeschränkt auf $[a,b)$ injektiv ist.
+\end{titleDef}
+
+\begin{titleDef}{abgeschlossenes einfaches Gebiet}
+\label{abgeinfachGebiet}
+Eine Teilmenge $G$ von einer \hyperref[regFlaeche]{regulären Fläche }$S$ heißt \textbf{\aeGebiet}, falls $G$ \hyperref[homoemorph]{homöomorph} zu einer abgeschlossenen Kreisscheibe ist (also $G\simeq S_R^1$) und der Rand $\partial G$ das Bild einer \hyperref[einfachgeschlossen]{einfach geschlossenen} Kurve ist.
+\end{titleDef}

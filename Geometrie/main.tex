@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc} %Umlaute in label
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{framed}
+\usepackage{float}
+\usepackage{txfonts}
+\usepackage[parfill]{parskip} %No indentation
+
+
+
+%Start counting from 0
+\setcounter{section}{-1}
+
+\theoremstyle{definition} %Make text non cursive
+\newtheorem{define2}{}
+
+\newcommand{\Topo}{$(X,\mathcal{O})$}
+\newcommand{\Toporef}{\hyperref[Topologie]{Topologie}}
+\newcommand{\Toporeflong}{\hyperref[Topologie]{\mbox{topologischer Raum}}}
+
+\newcommand{\listbsp}{\renewcommand{\labelenumi}{(\arabic{enumi})}}
+\newcommand{\offUm}{\hyperref[offen]{offenen} \hyperref[Umgebung]{Umgebung}}
+\newcommand{\pihalf}{\frac{\pi}{2}}
+\newcommand{\Rtwo}{\mathbb{R}^2}
+\newcommand{\Rthree}{\mathbb{R}^3}
+\newcommand{\aeGebiet}{\hyperref[abgeinfachGebiet]{abgeschlossenes einfaches Gebiet}}
+
+%Custom Environments
+\newenvironment{titleDef}[1]{\textbf{#1}\\\noindent}{}
+\newenvironment{rawDef}{}{}
+
+\begin{document}
+\section{Abkürzungen}
+\input{Abkürzungen}
+
+
+\clearpage
+\section{Eigenschaften}
+\subsection{Topologien}
+\input{Eigenschaften}
+
+
+\clearpage
+\section{Abbildungen/Kurven}
+\input{AbbildungenKurven}
+
+\clearpage
+\section{Geometrische Strukturen}
+\input{GeometrischeStrukturen}
+
+
+\clearpage
+\section{Topologien}
+\input{Topologien}
+
+\clearpage
+\section{Mannigfaltigkeiten}
+\input{Mannigfaltigkeiten}
+\subsection{Topologische Mannigfaltigkeiten}
+\input{TopoMannigfaltigkeiten}
+\newpage
+\subsection{Differenzierbare Mannigfaltigkeiten}
+\input{DiffMannigfaltigkeiten}
+
+\clearpage
+\section{Simplizes}
+\input{Simplizes}
+
+\clearpage
+\section{Reguläre Flächen}
+\input{RegularPlanesGenerell}
+\newpage
+\subsection{Konkrete Flächen}
+\input{RegularPlanes}
+\newpage
+\subsection{Gauß-Bonnet}
+\input{GaussBonnet}
+
+\clearpage
+\section{Hyperbolische Geometrie}
+\subsection{Gaußsches Axiomensystem und Riemmansche Geometrie}
+\input{GaussZuRiemann}
+\newpage
+\subsection{Hyperbolische Ebene und Poincaré-Halbebene}
+\input{HyperEbenePoincare}
+\newpage
+\subsection{Einheitskreis-Modell und Gauß-Krümmung}
+\input{HyperEbeneEinheitskreis}
+
+\end{document}

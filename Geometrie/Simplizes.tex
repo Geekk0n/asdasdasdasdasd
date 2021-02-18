@@ -1,0 +1,28 @@
+
+\begin{titleDef}{Teilsimplex}
+	\label{teilSimplex}
+	Die \hyperref[konvHuelle]{konveke Hülle} einer Teilmenge von $\{v_0,v_1,\ldots,v_k\}$ heißt \textbf{Teilsimplex} oder \textbf{Seite} des Simplex $s(v_0,v_1,\ldots,v_k)$
+\end{titleDef}
+
+\begin{titleDef}{Standardsimplex}
+\label{stdSimplex}
+Das \textbf{k-dimensionale Standardsimplex} ist $\Delta_i=s(e_1,e_2,\ldots,e_{k+1})\subset\mathbb{R}^{k+1}$ mit den Standard-Basisvektoren $e_1=(1,0,\ldots,0),e_2=(0,1,0,\ldots,0),\ldots$ als Ecken.
+\end{titleDef}
+
+\begin{titleDef}{Verklebungen}
+\label{verklebung}
+Gegeben seien zwei \hyperref[Topologie]{topologische Räume} $X$ und $Y$. Die \textbf{disjunkte Vereinigung} von $X$ und $Y$ ist die Vereinigung von vorher disjunkt gemachten Mengen: $X\sqcup Y=X\times \{0\}\cup Y\times \{1\}$\\
+Ist nun $A\subset X$ ein Teilraum und $f:A\to Y$ eine Abbildung, dann kann man auf $X\sqcup Y$ eine Äquivalenzrelation definieren:
+$$x\sim x^\prime \Longleftrightarrow\begin{cases}
+	&x=x^\prime\\
+	oder&f(x)=x^\prime\\
+	oder&f^\prime(x)=x\\
+	oder&f(x)=f(x^\prime)
+\end{cases}$$
+Der Quotientenraum $X\sqcup_f Y=X\sqcup Y/\sim$ heißt \textbf{Verklebung von X mit Y längs A via f}.
+\end{titleDef}
+
+\begin{titleDef}{Selbstverklebung}
+Falls $X=Y$ und $f:A\subset X\to X$ kann man X auch mit sich selbst verkleben. Solche \textbf{Selbstverklebungen} werden mit $X/f$ notiert.\par
+Beispiele für Selbstverklebungen sind das Einheitsquadrat, Zylinder, Torus, Möbiusband und die Kleinische Flasche.
+\end{titleDef}

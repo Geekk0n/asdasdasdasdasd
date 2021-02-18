@@ -1,0 +1,137 @@
+\begin{titleDef}{Parameter-Wechsel/Umparametrisierung}
+\label{paraWechsel}
+Sei S eine \hyperref[regFlaeche]{reguläre Fläche} und $p\in S$. Weiter seien $x_1:U_1\to S, x_2:U_2\to S$ zwei \hyperref[parametrisierung]{Parametriesierungen} so, dass $p\in x_1(U_1)\cap x_2(U_2)=W$.\\
+Dann ist der \textbf{Parameterwechsel} 
+$$x_1^{-1}\circ x_2:x_2^{-1}(W)\subset\mathbb{R}^2\to x_1^{-1}(W)\subset\mathbb{R}^2$$
+ein \hyperref[diffeomorph]{Diffeomorphismus}.
+\end{titleDef}
+
+\begin{titleDef}{(lokale) Parametrisierung}
+\label{parametrisierung}
+Eine \textbf{(lokale) Parametrisierung} für eine reguläre Fläche $S$ ist eine $C^\infty$-Abbildung von einer \hyperref[offen]{offenen} \hyperref[Umgebung]{Umgebung} $U\subset \mathbb{R}^2$ in den $\mathbb{R}^3$
+$$x:U\to\mathbb{R}^3;\: (u,v)\mapsto x(u,v)=(x_1(u,v),x_2(u,v),x_3(u,v))$$
+existiert sodass für jeden Punkt $p\in S$ eine \hyperref[offen]{offenen} \hyperref[Umgebung]{Umgebung} $V$ von p in $\mathbb{R}^3$ gilt:
+\begin{enumerate}[label=(\arabic*)]
+	\item $x(U)=S\cap V$ und $x:U\to S\cap V$ ist ein \hyperref[homoemorph]{Homöomorphismus} 
+	\item Die \hyperref[differenzial]{Ableitung} $dx(u,v):T_{(u,v)}\mathbb{R}^2\to T_{x(u,v)}\mathbb{R}^3$ ist injektiv für $(u,v)\in U$
+\end{enumerate}
+Bedingung (2) ist äquivalent zu
+\begin{enumerate}[label=(2\alph*)]
+	\item Die \hyperref[funktmatrix]{Funktionalmatrix} $\begin{pmatrix}
+		\frac{\partial x_1}{\partial u}(u,v)&\frac{\partial x_1}{\partial v}(u,v)\\
+		\frac{\partial x_2}{\partial u}(u,v)&\frac{\partial x_2}{\partial v}(u,v)\\
+		\frac{\partial x_3}{\partial u}(u,v)&\frac{\partial x_3}{\partial v}(u,v)\\
+	\end{pmatrix}$ hat Rang 2 für $(u,v)\in U$
+	\item Die Spaltenvektoren $x_u(u,v),\ x_v(u,v)$ sind linear unabhängig.
+	\item Das \hyperref[vektorprodukt]{Vektorprodukt} $x_u(u,v)\wedge x_v(u,v)\neq0$ für alle $(u,v)\in U$
+\end{enumerate}
+\end{titleDef}
+
+\begin{rawDef}
+Zu jeder regulären Fläche $S$ existiert in jedem Punkt $p\in S$ eine \hyperref[tangentialebene]{Tangentialebene} $T_pS$ die durch die \hyperref[differenzial]{Differentialvektoren} $x_u,x_v$ der Parametriesierung $x$ aufgespannt wird.\\
+Also gibt es eine 2-dimensionalen Vektorraum $\Rtwo\cong T_pS\subset T_p\Rthree\cong\Rthree$
+\end{rawDef}
+
+\begin{titleDef}{1.Fundamentalform}
+\label{fundamentalformEins}
+Ziel ist es ein Skalarprodukt auf der regulären Fläche $S$ zu definieren. Mache dazu die \hyperref[tangentialebene]{Tangentialebene} $T_pS$ zu einem euklidischen Vektorraum, in dem das Skalarprodukt als einschränkung des Standard-Skalarprodukts der reellen Zahlen definiert ist
+$$\langle \cdot,\cdot\rangle_p:T_pS\times T_pS\to\mathbb{R};\;\: \langle a,b\rangle_p=\langle a,b\rangle$$
+Die Zuordnung $I:p\mapsto I(p)=\langle \cdot,\cdot\rangle_p$ heißt die \textbf{1.Fundamentalform} von S.\par
+Praktibler aber äquivalent schaut man sich eine (lokale) Parametrisierung $x:U\to S$ von $S$ an. Dann bilden $x_u,x_v$ eine Basis der \hyperref[tangentialebene]{Tangentialebene} $T_{x(u,v)}S$. Damit kann man die 1.Fundamentalform $I(p)$ als symmetrisch, positiv definite $2\times 2$-Matrix darstellen:
+\begin{align*}
+	\mathrm{I}=\mathrm{I}(u,v) &= 
+	\begin{pmatrix} 
+		\mathrm{E}(u,v) & \mathrm{F}(u,v)\\
+		\mathrm{F}(u,v) & \mathrm{G}(u,v)
+	\end{pmatrix} = 
+	\begin{pmatrix} 
+		\langle x_u(u,v),x_u(u,v)\rangle & \langle x_u(u,v),x_v(u,v)\rangle\\
+		\langle x_v(u,v),x_u(u,v)\rangle & \langle x_v(u,v),x_v(u,v)\rangle
+	\end{pmatrix} 
+	\\
+	&= \begin{pmatrix} 
+		\mathrm{E} & \mathrm{F}\\
+		\mathrm{F} & \mathrm{G}
+	\end{pmatrix} =
+	\begin{pmatrix} 
+		\langle x_u,x_u\rangle & \langle x_u,x_v\rangle\\
+		\langle x_v,x_u\rangle & \langle x_v,x_v\rangle
+	\end{pmatrix}
+\end{align*}\\
+Die Matrix $I(u,v)$ ist genau dann positiv definit, wenn $E(u,v)>0$ und\\ ${(EG-F^2)(u,v)=det(Ix(u,v))}$
+\end{titleDef}
+
+\begin{titleDef}{innere Geometrie}
+\label{innerGeo}
+Größen der \textbf{inneren Geometrie} sind Größen einer regulären Fläche $S$ die nur von der 1.Fundamentalform abhängen bzw die komplett aus dieser bestimmt werden können. Solche Größen sind z.B:
+\begin{enumerate}[label=(\alph*)]
+	\item \textbf{\hyperref[laengeFlaechenkurve]{Länge von Flächenkurven}}$L(c)$
+	\item \textbf{\hyperref[winkelFlaechenkurve]{Winkel zwische Flächenkurven}} $\cos\angle(c_1^\prime(0),c_2^\prime(0))$
+	\item \textbf{\hyperref[inhaltPara]{Flächeninhalt der Parametrisierung}} $A(x(U))$
+	\item \textbf{\hyperref[gausskruemmung]{Die Gauß-Krümmung einer regulären Fläche S}}
+\end{enumerate}
+\end{titleDef}
+
+\begin{titleDef}{Reguläre Flächen als metrische Räume}
+Man kann eine reguläre Fläche $S$ zu einem \hyperref[MetrischerRaum]{metrischen Raum} machen. Für zwei Punkte $p,q\in S$ sei $\Omega_{pq}$ die Menge aller stückweise \hyperref[diffFlaechenkurve]{differenzierbare Flächenkurven} zwischen $p$ und $q$.
+Definiere dann die Metrik
+$$d_S:S\times S\to \mathbb{R}_{\geq0};\:\: d_S(p,q)=\inf\{L(c)|\ c\in\Omega_{pq}\}$$ 
+also ist der Abstand zweier Punkte definiert als die Länge der kürzersten Kurve die $p$ und $q$ verbindet.\\
+Damit ist $(S,d_S)$ ein metrischer Raum auf der regulären Fläche $S$.
+\end{titleDef}
+
+\begin{titleDef}{Normalenvektor}
+\label{normalenvektor}
+\label{vektorenfeld}
+Sei $S$ eine reguläre Fläche mit Parametrisierung $x:U\to S\subset\Rthree$. In jedem Punkt $p\in S$ wird durch $x_u,x_v$ eine \hyperref[tangentialebene]{Tangentialebene} $T_pS$ aufgespannt. Da nach Vorraussetzung an die Parametrisierung $x_u,x_v$ linear unabhängig sein müssen gilt insbesondere $\langle x_u\wedge x_v\rangle\neq0$. Der Vektor
+$$n(p)=n(x(u,v))\equiv n(u,v)=\frac{x_u(u,v)\wedge x_v(u,v)}{\lVert x_u\wedge x_v\rVert}$$
+ist ein Einheitsvektor in $\Rthree$ also $\lVert n(p)\rVert=1$ der orthogonal zur \hyperref[tangentialebene]{Tangentialebene} $T_pS$ steht also $n(p)\perp T_pS$. Dieser Vektor $n(p)$ heißt \textbf{Normalenvektor} von $S$ in $p$.\par
+Variiert man den Punkt $p$ so erhält man ein \textbf{Vektorenfeld}
+\end{titleDef}
+
+\begin{titleDef}{2.Fundamentalform}
+\label{fundamentalzweite}
+Die \textbf{2.Fundamentalform} einer regulären Fläche $S$ mit lokaler Parametrisierung $x:U\to S$ ist definiert als die Familie von symmetrischen $(2\times 2)$-Matrizen
+\begin{align*}
+	\mathrm{II}=\mathrm{II}(x(u,v))=\mathrm{II}(u,v) &= 
+	\begin{pmatrix} 
+		\mathrm{L}(u,v) & \mathrm{M}(u,v)\\
+		\mathrm{M}(u,v) & \mathrm{N}(u,v)
+	\end{pmatrix} = 
+	\begin{pmatrix} 
+		\langle x_{uu}(u,v),n(u,v)\rangle & \langle x_{uv}(u,v),n(u,v)\rangle\\
+		\langle x_{vu}(u,v),n(u,v)\rangle & \langle x_{vv}(u,v),n(u,v)\rangle
+	\end{pmatrix} 
+	\\
+	&= \begin{pmatrix} 
+		\mathrm{L} & \mathrm{M}\\
+		\mathrm{M} & \mathrm{N}
+	\end{pmatrix} =
+	\begin{pmatrix} 
+		\langle x_{uu},n\rangle & \langle x_{uv},n\rangle\\
+		\langle x_{vu},n\rangle & \langle x_{vv},n\rangle
+	\end{pmatrix}
+\end{align*}
+Beachte das im Gegensatz zur 1.Fundamentalform die 2.Fundamentalform nicht zwingend positiv definit ist.
+\end{titleDef}
+
+\begin{titleDef}{Gaußkrümmung}
+\label{gausskruemmung}
+Sei $S$ eine reguläre Fläche, $p\in S$ ein Punkt in $S$ und $\mathrm{I}(p),\mathrm{II}(p)$ die 1. bzw 2.Fundamentalform von $S$ in $p$. Die \textbf{Gauß-Krümmung} von $S$ ist definiert als:
+$$K:S\to\mathbb{R};\: K(p)=\frac{det(\mathrm{II}(p))}{det(\mathrm{I}(p))}$$
+Insgesamt gilt nun für jede reelle Zahl $\alpha\in\mathbb{R}$ eine \hyperref[regFlaeche]{reguläre Fläche} bzw 2-dimensionale \hyperref[diffMannigfaltigkeit]{differenzierbare Mannigfaltigkeit} die genau konstante Krümmung $\alpha$ hat.
+\begin{itemize}
+	\item Für $\alpha>0$ die \hyperref[ndimsphere]{2-Sphäre} $S_{\frac{1}{\sqrt{\alpha}}}^2$ mit Radius $R=\frac{1}{\sqrt{\alpha}}$
+	\item Für $\alpha=0$ die euklidische Ebene
+	\item Für $\alpha<0$ die \hyperref[hyperEinheitskreis]{Einheitskreisscheibe} $D^2$ (bzw das isometrische Modell $H^2$ der \hyperref[hyperbolischpoincare]{Poincaré-Halbebene}) mit der Metrik $\frac{1}{\sqrt{\alpha}}d_{h^*}$ bzw $\frac{1}{\sqrt{\alpha}}d_{h}$
+\end{itemize}
+\end{titleDef}
+
+\begin{titleDef}{Formel von Bertrand-Puiseux}
+\label{bertrandpuiseux}
+Sei $S$ eine reguläre Fläche und $p\in S$. Für ein kleines $r$ sei \\
+$S_r(p)=\{q\in S|\ d_S(p,q)=r\}$ der (metrische) Kreis in $S$ um $p$ mit Radius $r$. Weiter sei $L(S_r(p))$ die \hyperref[laengeFlaechenkurve]{Länge dieser Kurve in S}. Dann gilt:
+$$K(p)=\lim_{r\to 0}\frac{3}{\pi r^3}(2\pi r-L(S_r(p)))$$
+Also die Gauß-Krümmung ist also ein Maß in wie weit die Geometrie einer Fläche $S$ von dem Standard euklidische Raum abweicht, indem die Länge des Kreises in der euklidischen Ebene $2\pi r$ zu der Länge eines Kreises in der Fläche $S$ verglichen wird.
+
+\end{titleDef}

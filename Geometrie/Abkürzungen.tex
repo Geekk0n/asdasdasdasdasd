@@ -1,0 +1,308 @@
+\begin{titleDef}{Normen}
+\textbf{$\ell_1$:}$\displaystyle\lVert x\rVert_1=\sum_{i=1}^{n}\lvert x_i\rvert$      \\  
+\textbf{$\ell_2$:}$\displaystyle\lVert x\rVert_2=\sqrt{\sum_{i=1}^{n}x_i^2}$   \\
+\textbf{$\ell_\infty$:}$\displaystyle\lVert x\rVert_\infty=\max\{x_1,\ldots,x_n\}=\max\limits_{1\leq i\leq n}x_i$      
+\end{titleDef}
+
+\begin{titleDef}{Cauchy-Schwarz Ungleichung}
+\label{cauchyschwarz}
+Es gilt:
+$$\lvert\langle x,y\rangle\rvert\leq\lVert x\rVert\cdot\lVert y\rVert\qquad\text{bzw}$$
+$$\langle x,y\rangle\leq\lVert x\rVert\cdot\lVert y\rVert\text{    wenn x und y reell sind.}$$
+Es gilt Gleichheit $\lvert\langle x,y\rangle\rvert=\lVert x\rVert\cdot\lVert y\rVert$ genau dann, wenn $x$ und $y$ linear unabhängig sind.
+\end{titleDef}
+
+\begin{titleDef}{Abgeschlossene Hülle $\overline{B}$}
+\label{abhuelle}
+Sei \Topo~eine \Toporef~und $B\subseteq X$ eine Teilmenge von X. Die Menge $\overline{B}$~der Punkte von X, die nicht äußere Punkte von $B$ sind, also in $B$ oder auf dem Rand $\partial B$~von B liegt\par
+Ist $X$ ein \hyperref[hausdorffsch]{hausdorffscher Raum} und $K\subset X$ \hyperref[kompakt]{kompakt}\par $\Rightarrow$ Dann ist $K$ abgeschlossen.
+\end{titleDef}
+
+\begin{titleDef}{Zusammenhangskomponente}
+\label{zsmkomponente}
+Sei X ein \Toporef~ und $x\in X$. Die \textbf{Zusammenhangskomponente} von x ist die Vereinigung aller \hyperref[zusammenhang]{zusammenhängenden} Teilmengen von X, die x enthalten.\\
+Die Zusammenhangskomponenten eines \hyperref[Topologie]{topologischen Raumes} sind zusammenhängend und bilden eine disjunkte Zerlegung von X.
+\end{titleDef}
+
+\begin{titleDef}{Offener Ball $B_r$}
+\label{balloffen}
+Der \textbf{offene Ball vom Radius r um Punkt p} ist \\$B_r(p)=\{x\in X|\ d(x,p)<r\}$
+\end{titleDef}
+
+\begin{titleDef}{Abgeschlossener Ball $\overline{B_r}$}
+\label{ballabgeschlossen}
+Der \textbf{offene Ball vom Radius r um Punkt p} ist \\$B_r(p)=\{x\in X|\ d(x,p)\le r\}$
+\end{titleDef}
+
+\begin{titleDef}{Sphäre $S_r$}
+\label{sphere}
+Die \textbf{Sphäre vom Radius r um Punkt p} ist \\$S_r(p)=\{x\in X|\ d(x,p)=r\}$
+\end{titleDef}
+
+\begin{titleDef}{n-dimensionale Sphäre $S_r^n$}
+	\label{ndimsphere}
+	Die \textbf{n-dimensionale Sphäre vom Radius r} ist\\
+	$S^n_r=\{x\in\mathbb{R}^{n+1}|\ \lVert x\rVert^2=x_1^2+\dots+x_{n+1}^2=r\}$
+\end{titleDef}
+
+\begin{titleDef}{Einheitskreit $S^1$}
+\label{Einheitskreis}
+Der \textbf{Einheitskreis} $S^1$ ist gerade $S^1=\{z\in\mathbb{C} |\ \lvert z\rvert = 1\}$ bzw auf die reellen Zahlen eingeschränkt ${S^1=\{x=(x_1,x_2)\in\mathbb{R}^2 |\ \lvert x\rvert =x_1^2+x_2^2=1\}}$
+\end{titleDef}
+
+\begin{titleDef}{Einheitssphäre $S^2$}
+	\label{Einheitssphere}
+	Die \textbf{Einheitssphäre} $S^2$ ist gerade ${S^2=\{x=(x_1,x_2,x_3)\in\mathbb{R}^3 |\ \lvert x\rvert =x_1^2+x_2^2+x_3^2=1\}}$
+\end{titleDef}
+
+\begin{titleDef}{Großkreis}
+\label{grosskreis}
+Die \textbf{Großkreise} der Sphäre $S_R^2$ sind gerade Schnitte von Ebenen mit der $S_R^2$ durch den Nullpunkt, also gerade der Äquator oder beliebige Längenkreise (also die gekrümmten Längengrade von Nord zu Südpol) aber \textbf{nicht} die Breitenkreise.\par
+Ein Großkreis ist z.B gegeben durch
+$$c:[0,L]\to S_R^2$$
+$$s\mapsto\begin{pmatrix}
+	R\cos(s)\\R\sin(t)\sin(s)\\R\cos(t)\sin(s)
+\end{pmatrix}$$
+Das ist also eine \hyperref[rotFlaeche]{rotationsfläche} eine Kurve $s\mapsto(R\cos(s),0,R\sin(t))$ die aber anders als sonst hier nicht um die z-Achse rotiert wird sonder um die x-Achse deshalb ist $\varphi(t)=R\sin(t)$ und $\psi(t)=R\cos(t)$ und
+$$s\mapsto\begin{pmatrix}
+	\psi(s)\\\varphi(s)\sin(t)\\\varphi(s)\cos(t)
+\end{pmatrix}$$
+\end{titleDef}
+
+\begin{titleDef}{Nordpol/Südpol}
+\label{pol}
+Sei $S^{n+1}$ die n-dimensionale Sphäre vom Radius R. Dann ist $e_{n+1}=(0,\ldots,0,R)\in S^{n+1}$ der \textbf{Nordpol} und $\overline{e}_{n+1}=(0,\ldots,0,-R)\in S^{n+1}$ der \textbf{Südpol}
+\end{titleDef}
+
+\begin{titleDef}{Standard Metrik $d_e$}
+\label{stdmetrik}
+Die Standard-Matrik $d_e$ ist definiert durch 
+$$d_e(x,y)=\lVert x-y\rVert$$
+\end{titleDef}
+
+\begin{titleDef}{Abbildungsabkürzungen}
+\end{titleDef}
+
+\begin{rawDef}
+\label{homoemorphshort}
+$X\simeq Y \Leftrightarrow X \text{ und } Y$ sind \hyperref[homoemorph]{homöomorph}
+\end{rawDef}
+
+\begin{titleDef}{konvexe Hülle}
+\label{konvHuelle}
+Die \textbf{konvexe Hülle} $s(v_0,v_1,\ldots,v_k)$ ist definiert durch k+1 affin unabhängige Punkte $v_0,v_1,\ldots,v_k$ durch:
+$$s(v_0,v_1,\ldots,v_k)=\left\{\sum_{i=0}^{k}\lambda_iv_i |\ \lambda_i\geq0,\sum_{i=0}^{k}\lambda_i=1\right\}$$
+Mit $v_1-v_0,\ldots,v_k-v_0$ linear unabhängig.
+\end{titleDef}
+
+\begin{titleDef}{Tangentialraum $T_p\mathbb{R}^n$}
+\label{tangentialraum}
+Für einen Punkt $p\in\mathbb{R}^n$ ist der \textbf{Tangentialraum} $T_p\mathbb{R}^n$ in $p$ definiert als der affine Unterraum $\{p\}\times\mathbb{R}^n$ also alle Richtungsvektoren mit Fußpunkt p.
+\end{titleDef}
+
+\begin{titleDef}{Tangentialebene $T_pS$}
+\label{tangentialebene}
+Sei $S$ eine \hyperref[regFlaeche]{reguläre Fläche} mit Parametrisierung $x(u,v)$. Die \textbf{Tangentialebene von $S$ im Punkt $p=x(u_0,v_0)$} ist definiert als die lineare Hülle der Vektoren $x_u$ und $x_v$ in diesem Punkt, also die Ebene die durch diese Vektoren aufgespannt wird.
+$$T_pS=dx(u_0,v_0)(T_{(u_0,v_0)}\mathbb{R}^2)=\{p\}\times Span(x_u(u_0,v_0),x_v(u_0,v_0))\subset T_p\mathbb{R}^3$$ 
+\end{titleDef}
+
+\begin{titleDef}{Kreuz-/Vektorprodukt $a\wedge b$}
+\label{vektorprodukt}
+Für zwei Vektoren $a=(a_1,a_2,a_3),\ b=(b_1,b_2,b_3)\in\mathbb{R}^3$ ist das \textbf{Vektorprodukt} definiert durch ${a\wedge b=(a_2b_3-a_3b_2,a_3b_1-a_1b_3,a_1b_2-a_2b_1)}$
+\begin{itemize}
+	\item $a\wedge b$ ist orthogonal zu a und b.
+	\item Für den Winkel $\alpha$ zwischen $a$ und $b$ ist $\lVert a\wedge b\rVert=\lVert a\rVert\lVert b\rVert\sin\alpha$ die Fläche des von $a$ und $b$ aufgespannten Parallelograms.
+	\item Mit dem Standard-Skalarprodukt gilt: $\lVert a\wedge b\rVert = \langle a,a\rangle\langle b,b\rangle-\langle a,b\rangle^2$
+	\item $a,b,a\wedge b$ sind positiv orientiert d.h det$(a,b,a\wedge b)>0$
+\end{itemize} 
+\end{titleDef}
+
+\begin{titleDef}{Funktionalmatrix $D(u,v)$}
+\label{funktmatrix}
+$$D(u,v)=(x_u(u,v),x_v(u,v))=\begin{pmatrix}
+	\frac{\partial x_1}{\partial u}(u,v)&\frac{\partial x_1}{\partial v}(u,v)\\
+	\frac{\partial x_2}{\partial u}(u,v)&\frac{\partial x_2}{\partial v}(u,v)\\
+	\frac{\partial x_3}{\partial u}(u,v)&\frac{\partial x_3}{\partial v}(u,v)\\
+\end{pmatrix}=\begin{pmatrix}
+&\\
+x_u(u,v)&x_v(u,v)\\
+&
+\end{pmatrix}$$
+\end{titleDef}
+
+\begin{titleDef}{1.Fundamentalform}
+\label{1Fundamentalformshort}
+\label{I}
+\begin{align*}
+\mathrm{I}=\mathrm{I}(u,v) &= 
+    \begin{pmatrix} 
+        \mathrm{E}(u,v) & \mathrm{F}(u,v)\\
+        \mathrm{F}(u,v) & \mathrm{G}(u,v)
+    \end{pmatrix} = 
+    \begin{pmatrix} 
+        \langle x_u(u,v),x_u(u,v)\rangle & \langle x_u(u,v),x_v(u,v)\rangle\\
+        \langle x_v(u,v),x_u(u,v)\rangle & \langle x_v(u,v),x_v(u,v)\rangle
+    \end{pmatrix} 
+    \\
+    &= \begin{pmatrix} 
+        \mathrm{E} & \mathrm{F}\\
+        \mathrm{F} & \mathrm{G}
+    \end{pmatrix} =
+    \begin{pmatrix} 
+        \langle x_u,x_u\rangle & \langle x_u,x_v\rangle\\
+        \langle x_v,x_u\rangle & \langle x_v,x_v\rangle
+    \end{pmatrix}
+\end{align*}
+\end{titleDef}
+
+\begin{rawDef}
+\label{E}
+$\mathrm{E(u,v)} = \mathrm{E} = \langle x_u(u,v),x_u(u,v)\rangle$
+\end{rawDef}
+
+\begin{rawDef}
+\label{F}
+$\mathrm{F(u,v)} = \mathrm{F} = \langle x_u(u,v),x_v(u,v)\rangle = \langle x_v(u,v),x_u(u,v)\rangle$
+\end{rawDef}
+
+\begin{rawDef}
+\label{G}
+$\mathrm{G(u,v)} = \mathrm{G} = \langle x_v(u,v),x_v(u,v)\rangle$
+\end{rawDef}
+
+\begin{titleDef}{2.Fundamentalform}
+\label{2Fundamentalform}
+\label{II}
+\begin{align*}
+\mathrm{II}=\mathrm{II}(x(u,v))=\mathrm{II}(u,v) &= 
+    \begin{pmatrix} 
+        \mathrm{L}(u,v) & \mathrm{M}(u,v)\\
+        \mathrm{M}(u,v) & \mathrm{N}(u,v)
+    \end{pmatrix} = 
+    \begin{pmatrix} 
+        \langle x_{uu}(u,v),n(u,v)\rangle & \langle x_{uv}(u,v),n(u,v)\rangle\\
+        \langle x_{vu}(u,v),n(u,v)\rangle & \langle x_{vv}(u,v),n(u,v)\rangle
+    \end{pmatrix} 
+    \\
+    &= \begin{pmatrix} 
+        \mathrm{L} & \mathrm{M}\\
+        \mathrm{M} & \mathrm{N}
+    \end{pmatrix} =
+    \begin{pmatrix} 
+        \langle x_{uu},n\rangle & \langle x_{uv},n\rangle\\
+        \langle x_{vu},n\rangle & \langle x_{vv},n\rangle
+    \end{pmatrix}
+\end{align*}
+\end{titleDef}
+
+\begin{rawDef}
+\label{L}
+$\mathrm{L(u,v)} = \mathrm{L} = \langle x_{uu}(u,v),n\rangle$
+\end{rawDef}
+
+\begin{rawDef}
+\label{M}
+$\mathrm{M(u,v)} = \mathrm{M} = \langle x_{uv}(u,v),n\rangle = \langle x_{vu}(u,v),n\rangle$
+\end{rawDef}
+
+\begin{rawDef}
+\label{N}
+$\mathrm{N(u,v)} = \mathrm{N} = \langle x_{vv}(u,v),n\rangle$
+\end{rawDef}
+
+\begin{titleDef}{Gauß-Krümmung}
+\label{Gaußkrümmung}
+\label{K}
+$K:S\to\mathbb{R}; K(p)=\dfrac{\text{det}\hyperref[II]{\mathrm{II}}(p)}
+        {\text{det}\hyperref[I]{\mathrm{I}}(p)}$
+
+\end{titleDef}   
+
+\begin{titleDef}{kovariante Ableitung $D_ua$}
+Für \hyperref[normalenvektor]{Normalenvektor} $n$ und \hyperref[vektorenfeld]{Vektorenfeld} $a:U\to\Rthree$ entlang einer \hyperref[regFlaeche]{regulären Fläche} $S$ ist die \textbf{kovariante Ableitung}
+$$D_ua=a_u-\langle n,a_u\rangle n=a_u+\langle n_u,a\rangle n$$\par
+Für eine $C^\infty$-Funktion $f:U\to\mathbb{R}$ ist die kovariante Ableitung $D_u(fn)=fn_u$\par
+Für ein \hyperref[tangentialesVektorfeld]{tangentiales Einheitsvektorenfeld} $a:U\to\Rthree$ längs einer \hyperref[regFlaeche]{regulären Fläche} $S$
+\end{titleDef}
+
+\begin{titleDef}{Einheitsvektorenfeld $e(u,v)$}
+\label{einheitsvekfeld}
+Sei $c$ eine \hyperref[kurve]{differenzierbare Kurve} und $S$ eine \hyperref[regFlaeche]{reguläre Fläche} mit Parametrisierung $x:U\to S$.
+Dann wird durch $e(u,v)=\frac{x_u(u,v)}{\lVert x_u(u,v)\rVert}$ ein \textbf{Einheitsvektorenfeld} definiert.\par
+Für ein tangentiales Einheitsvektorenfeld $e(s)$ gilt $\langle D_e,e\rangle=0$ wobei $D_e$ die \hyperref[kovAbleitung]{kovariante Ableitung} ist. Gilt für die gemischten kovarianten Ableitungen:
+$$(D_vD_u-D_uD_v)a=K\sqrt{EG-F^2}(n\wedge a)$$
+\end{titleDef}
+
+\begin{titleDef}{Außenwinkel}
+\label{aussenwinkel}
+Sei $S$ eine \hyperref[regFlaeche]{reguläre Fläche} und $c:[a,b]\to S$ eine \textbf{nur} stückweise \hyperref[regulaer]{reguläre} Kurve (also es gibt endlich viele Punkt $s\in [a,b]$ sodass $c$ in diesen Punkten nicht differenzierbar ist). Eine solche Kurve hat dann $m$ Ecken also genau $m$ solcher Punkte $s_i$ an denen $c$ nicht differenzierbar ist. An diesen Stellen gibt es dann jeweils eine rechtsseite und eine linksseitige Tangente $c^\prime(s_i^+)/c^\prime(s_i^-)$, die jeweils verschieden sind.\\
+Dann hat man genau $m$ \textbf{Außenwinkel} $\delta_i=\angle(c^\prime(s_i^-),c^\prime(s_i^+))$
+\end{titleDef}
+
+\begin{titleDef}{Euler-Charakteristik}
+\label{eulerchar}
+Die \textbf{Euler-Charakteristik} eine \hyperref[triangulierung]{Triangulierung} $T$ eine \hyperref[Mannigfaltigkeit]{2-Mannigfaltigkeit} $M$ ist die Wechselsumme
+$$\chi_T(M)=\text{Anzahl Ecken - Anzahl Kanten + Anzahl Seitenflächen}$$
+der Triangulierung.
+\begin{enumerate}[label=(\arabic*)]
+	\item Die Euler-Charakteristik ist unabhängig von der Triangulierung also $\chi_T(M)=\chi(M)$
+	\item Falls $M$ \hyperref[geschlecht]{Geschlecht} $g$ hat, so gilt $\chi(M)=2-2g$
+	\item Die Eulere-Charakteristik ist eine topologische Invariante also \hyperref[homoemorph]{homöomorphe} Mannigfaltigkeiten haben die gleiche Euler-Charakteristik
+\end{enumerate}
+\end{titleDef}
+
+\begin{titleDef}{Hyperbolische Ebene $(H^2,d_h)$}
+Die hyperbolische Ebene $(H^2,d_h)$ ist der eindeutige \hyperref[MetrischerRaum]{metrische Raum} der das Inzidenz- und Spielgelungs-Axiom des \hyperref[axiomPlane]{Axiomensystem der euklidischen Ebenen} erfüllt, das Parallelen-Axiom jedoch nicht.\\
+D.h alle solche metrischen Räume sind (bis auf Skalierung) \hyperref[Isometrie]{isometrisch} zu $(H^2,d_h)$.
+\end{titleDef}
+
+\begin{titleDef}{Hyperbolischer Flächeninhalt $\mu(G)$}
+Für eine Teilmenge $G\subset H^2$ von $H^2$ ist der \textbf{hyperbolische Flächeninhalt} definiert durch:
+$$0\leq\mu(G)=\int\int_{G}\frac{1}{y^2}dxdy\leq\infty$$
+\end{titleDef}
+
+\begin{rawDef}
+$\partial_\infty H^2$: Die Menge $\partial_\infty H^2=\mathbb{R}\cup\infty$ heißt der \textbf{unendliche Rand} von $H^2$.
+\end{rawDef}
+
+\begin{rawDef}
+$\overline{H^2}$: Man kann die hyperbolische Ebene "kompaktifizieren" indem man die reelle-/x-Achse und einen Punkt $\infty$ hinzunimmt: $\overline{H^2}=H^2\cup(\mathbb{R}\cup\{\infty\})$
+\end{rawDef}
+
+\begin{rawDef}
+$Sym(n)$ ist die Menge der positiv definiten, symmetrischen $(n\times n)$-Matrizen	
+\end{rawDef}
+
+\begin{titleDef}{Spezielle lineare Gruppe $SL(2,\mathbb{R}$}
+\label{spezielllinGruppe}
+Die spezielle lineare Gruppe $SL(2,\mathbb{R})$ ist die Menge aller reellen $(2\times 2)$-Matrizen mit Determinante 1 versehen mit Matrixmultiplikation.
+\end{titleDef}
+
+\begin{titleDef}{Möbiustransformation $T_A(z)$}
+Für eine Matrix $$A\in SL(2,\mathbb{R}),\: A=\begin{pmatrix}
+	a&b\\c&d
+\end{pmatrix},\: det(A)=ad-bc=1$$
+definiere ist die \textbf{Möbiustransformation}:
+$$T_A:H^2\to H^2;\: z\mapsto\frac{az+b}{cz+d}$$
+\end{titleDef}
+
+\begin{titleDef}{Einheitskreisscheibe $D^2$}
+\label{einheitskreisscheibeoff}
+Die \textbf{Einheitskreisscheibe} ist gegeben durch:
+$$D^2=\{(x,y)\in\Rtwo|\ x^2+y^2<1\}=\{z\in\mathbb{C}|\ \lvert z\rvert<1\}$$
+\end{titleDef}
+
+\begin{rawDef}
+\label{uebergangPoincareEinheitskreis}
+$M:H^2\mathbb{C}\to D^2\subset\mathbb{C};\: z\mapsto\frac{iz+1}{z+i}$ ist die Abbildungvon der \hyperref[hyperbolischpoincare]{Poincaré-Halbebene} in das \hyperref[hyperEinheitskreis]{Einheitskreismodell}
+\end{rawDef}
+
+\begin{rawDef}
+$d_h^*(z,w)$
+Die Längenmetrik $d_h^*(z,w)$ im \hyperref[hyperEinheitskreis]{Einheitskreismodell für hypergeometrische Ebenen} ist gegeben durch: \\$d_h^*(z,w)=d_h(M^{-1})(z),M^{-1}(w))$ für die Abbildung $M:H^2\mathbb{C}\to D^2\subset\mathbb{C};\: z\mapsto\frac{iz+1}{z+i}$ von der \hyperref[hyperbolischpoincare]{Poincaré-Halbebene} in das \hyperref[hyperEinheitskreis]{Einheitskreismodell}
+\end{rawDef}
+
+\begin{titleDef}{hyperbolischer Kreis $S_\varrho$}
+Der \textbf{hyperbolische Kreis} $S_\varrho(0)$ in $D^2$ mit Zentrum 0 und hyperbolischen Radius ist der euklidische Kreis um 0 mit euklidischen Radius r, wobei
+$$\varrho=2arctan(r)\Longleftrightarrow r=\tanh(\frac{\varrho}{2})$$
+\end{titleDef}

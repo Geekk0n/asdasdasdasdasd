@@ -1,0 +1,85 @@
+Im Prinzip sagt der Satz von Gauß-Bonnet aus, dass die Gesamtkrümmung einer Fläche gleich der Krümmung der Kurve die den Rand der Fläche beschreibt ist und gibt diesem einen konkreten Wert.
+
+\begin{framed}
+In diesem Abschnitt gelten die Abkürzungen:
+$$\int_{\partial G}\kappa_g(s)ds=\int_{x^-{1}(\partial G)}\kappa_g(s)ds$$
+$$\int\int_{G}KdA=\int\int_{x^{-1}(G)}K\sqrt{EG-F^2}dudv$$ 
+Also $\int_{\partial G}\kappa_g(s)ds$ ist die gesamtkrümmung einer Kurve die den Rand von einem \aeGebiet $G$  beschreibt.\\
+$\int\int_{G}KdA$ beschreibt die Gesamtkrümmung der Fläche die ein \aeGebiet $G$ hat.
+\end{framed}
+
+\begin{titleDef}{Geodätische Krümmung}
+\label{geodaetischeKruemmung}
+Sei $c(s)=(x(u(s),v(s)))\subset S\subset\Rthree$ eine Flächenkurve auf einer regulären Fläche $S$, die o.B.d.A \hyperref[bogenlaenge]{nach Bogenlänge parametrisiert ist} (d.h $\lVert c^\prime(s)\rVert=\lVert \frac{dc}{ds}(s)\rVert=1$). Es gilt dann das $c^{\prime\prime}\perp c^\prime$ und $c^\prime,n,n\wedge c^\prime$ jeweils orthonormal sind. Damit kann $c^{\prime\prime}$ als Linearkombination von diesen geschrieben werden:
+$$c^{\prime\prime}(s)=\kappa_g(s)(n(s)\wedge c^\prime(s))+\alpha(s)n(s)$$
+Die Zahl $\kappa_g(s)$ heißt die \textbf{geodätische Krümmung} von $c$ im Punkt $s$.
+Die \textbf{geodätische Krümmung} ist ein Maß dafür wie "gekrümmt" die Kurve $c$ im Punkt $s$ ist, also wie "gebogen" sie zu jedem Zeitpunkt ist.\par
+Für eine \hyperref[regulaer]{reguläre} Kurve $\gamma:[0,L]\to\mathbb{R}^n$ ist die Krümmung $\kappa_\gamma$ gegeben durch:
+$$\kappa_\gamma(t)=\frac{\sqrt{\lVert\gamma^\prime(t)\rVert^2\cdot \lVert\gamma^{\prime\prime}(t)\rVert^2-\langle\gamma^\prime(t),\gamma^{\prime\prime}\rangle^2}}{\lVert\gamma^\prime(t)\rVert^3}$$
+Falls $\gamma$ nach \hyperref[bogenlaenge]{Bogenlänge parametrisiert} ist, d.h $\lVert\gamma^\prime(t)\rVert=1$ dann ist die Krümmung der Betrag der zweiten Ableitung also 
+$$\kappa_\gamma(t)=\lVert\gamma^{\prime\prime}\rVert$$\par
+Eine ebene Kurve (also eine Kurve die in der Ebene $\Rtwo$ liegt) $c:[0,L]\to\Rtwo$ die konstant Krümmung $\equiv0$ hat d.h $\kappa_c\equiv0$ ist immer der Form
+$$c(t)=c(0)+tc^\prime(0)\qquad mit \lVert c^\prime(0)\rVert=0 \text{  also normiert}$$\par
+Die geodätische Krümmung einer Kurve beschreibt wie stark sie nach links gekrümmt ist. Also wenn $\kappa_g(p)>0$ dann ist Kurve im Punkt $p$ nach links gekrümmt, $\kappa_g(p)<0$ dann im Punkt $p$ nach rechts gekrümmt und $\kappa_g(p)=0$ dann ist sie im Punkt $p$ gerade.
+\end{titleDef}
+
+\begin{titleDef}{Geodätische}
+\label{geodaetische}
+Flächenkurven $c$ mit $\kappa_g=0$ heißen \textbf{Geodätische}. Sie verallgemeinern bzw. entsprechen Geraden für allgemeine Geometrien. \textbf{Geodätische} sind lokal kürzeste Verbindungen.\par
+\begin{enumerate}[label=(\arabic*)]
+	\item In der \hyperref[affinEbene]{Affinen Ebene} $E$ gilt:
+    $$c^{\prime\prime} \text{parallel zu }n\Longleftrightarrow c^{\prime\prime} \text{ orthogonal zu }E$$
+	$$c^{\prime\prime}\subset E, c^{\prime\prime}\perp E\Longleftrightarrow c^{\prime\prime}=0 \Longleftrightarrow c=\text{Gerade}$$
+	\item In der Sphäre $S_R^2$ sind die Geodätischen \hyperref[grosskreis]{Großkreise} also Schnitte von Ebenen mit der $S_R^2$ durch den Nullpunkt. Für diese Großkreise gilt nämlich: $c^\prime\wedge c^{\prime\prime}$ und $c^{\prime\prime}$ ist parallel zum Normalenvektor n und damit nach beispiel (1) $\kappa_g=0$
+	\item Für einen Zylinder $S$ mit Parametrisierung
+	$$x(u,v)=(r\cos u,r\sin u,v),\qquad (u,v)\in(0,2\pi)\times\mathbb{R}$$
+	sind Geodätische gerade die Kurven:
+	$$c(s)=(\cos as,\sin as,bs),\:\: a,b\in\mathbb{R}$$
+\end{enumerate}
+\end{titleDef}
+
+\begin{titleDef}{Umlaufsatz von Hop}
+\label{umlaufHop}
+Sei $S$ eine reguläre Fläche und $G\subset x(U)\subset S$ ein \aeGebiet mit Rand $\partial G$ die durch eine Kurve $c(s), s\in[0,L]$ (wobei $L$ den "Endpunkt" der Kurve darstellt) die nach \hyperref[bogenlaenge]{Bogenlänge} parametrisiert ist beschrieben wird. Die Einschränkung des \hyperref[einheitsvekfeld]{einheitsvektorenfelds} $e(u,v)=\frac{x_u(u,v)}{\lVert x_u(u,v)\rVert}$ auf die Kurve $c$ ist wieder ein Einheitsvektorenfeld $e(s)$. Sei $n(s)$ das \hyperref[vektorenfeld]{Vektorenfeld} der Normalenvektoren von $S$ eingeschränkt auf $c$. Dann ist $(e(s),n(s)\wedge e(s))$ eine Orthonormalbasis von $T_{c(s)}S$ also $e(s)\perp n(s)\wedge e(s)$.\\
+Man kann dann eine \textbf{Winkelfunktion} $\theta:[0,L]\to\mathbb{R}$ definieren die lokal gegeben ist durch die Beziehung:
+$$c^\prime(s)=\cos(\theta(s))e(s)+\sin(\theta(s))(n(s)\wedge e(s))$$
+Für eine solche \hyperref[einfachgeschlossen]{einfach geschlossene}, \hyperref[orientierbar]{positiv orientierte} Kurve $c$ wie oben mit Bild $\partial G=c$ für ein \aeGebiet $G$ und die entsprechende \textbf{Winkelfunktion} $\theta$ gilt:
+$$\int_{\partial G}\theta^\prime ds=2\pi$$
+Also ist die Länge der Winkelfunktion gerade $2\pi$
+\end{titleDef}
+
+\begin{titleDef}{Formel von Green-Stokes}
+\label{greenStokes}
+Sei $G$ ein \aeGebiet in der Ebene $\Rtwo$ mit differenzierbarem Rand $\partial G=\{(u(s),v(s)|\ s\in I)\}$. Weiter seien $P,Q:G\to \mathbb{R}$ differenzierbare Funktionen. Dann gilt:
+$$\int_{\partial G}(Pu^\prime+Qv^\prime)ds=\int\int_{G}(Q_u-P_v)dudv$$
+\end{titleDef}
+
+\begin{titleDef}{Satz von Gauß-Bonnet lokale Version}
+\label{gaussLokal}
+Sei $S$ eine reguläre \hyperref[orientierbar]{orientierbare} Fläche und $x:U\to S$ eine lokale Parametrisierung. Weiter sei $G\subset x(U)\subset S$ ein \aeGebiet mit \hyperref[orientierbar]{orientierbarem Rand} $\partial G$. Dann gilt:
+$$\int\int_GKdA=\int\int_{\partial G}\kappa_g(s)ds=2\pi$$
+\end{titleDef}
+
+\begin{titleDef}{Satz von Gauß-Bonnet für Polygone}
+\label{gaussPolygon}
+Sei $S$ eine reguläre \hyperref[orientierbar]{orientierbare} Fläche mit lokaler Parametrisierung $x:U\to S$. Weiter sei $G\subset x(U)\subset S$ ein \hyperref[polygon]{Polygon} mit stückweise differenzierbarem Rand $\partial G$ mit $m$ Ecken und Innenwinkeln $\alpha_i$. Dann gilt:
+$$\int\int_GKdA+\int_{\partial G}\kappa_g(s)ds=\pi(2-m)+\sum_{i=1}^{m}\alpha_i$$
+\end{titleDef}
+
+\begin{titleDef}{Satz von Gauß-Bonnet für geodätische Dreiecke}
+\label{gaussGeoDreieck}
+Sei $S$ eine reguläre \hyperref[orientierbar]{orientierbare} Fläche mit lokaler Parametrisierung $x:U\to S$. Weiter sei $\Delta\subset x(U)\subset S$ ein \hyperref[geodaetischeDreiecke]{geodätisches Dreieck} mit Innenwinkeln $\alpha,\beta,\gamma$. Dann gilt:
+$$\int\int_{\Delta}KdA=\alpha+\beta+\gamma-\pi$$
+\end{titleDef}
+
+\begin{titleDef}{Satz von Gauß-Bonnet globale Version}
+\label{gaussGlobal}
+Sei $S\subset\Rthree$ eine \hyperref[kompakt]{kompakte}~\hyperref[regFlaeche]{reguläre Fläche} mit \hyperref[geschlecht]{Geschlecht} $g$. Dann gilt:
+$$\int\int_{S}KdA=2\pi\chi(S)=2\pi(2-2g)$$
+\end{titleDef}
+
+\begin{titleDef}{Gauß-Bonnet für hyperbolische Dreiecke}
+	Der \hyperref[hyperFlaeche]{hyperbolische Flächeninhalt} eines \hyperref[hyperDreieck]{hyperbolischen Dreiecks} $\Delta$ ist durch die drei Innenwinkel $\alpha,\beta,\gamma$ bestimmt und durch $\pi$ beschränkt.
+	$$0\leq\mu(\Delta)=\pi-(\alpha+\beta+\gamma)$$
+	Insbesondere ist also $\alpha+\beta+\gamma<\pi$ und $\mu(\Delta)<\pi$
+\end{titleDef}
